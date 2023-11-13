@@ -20,7 +20,7 @@
         <nav id="sidebar-left" class="col-md-3 bg-black text-white">
           <div class="btn-group">
             <button
-              class="btn btn-black text-white btn-sm"
+              class="btn btn-black text-white btn-sm dropdown-toggle"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -32,26 +32,26 @@
           <div id="icon-navbar">
             <ul class="navbar-nav mt-2">
               <li class="nav-item">
-                <a href="#"><i class="bi bi-house-door-fill pe-2"></i> Homepage</a>
+                <a href="#"><i class="bi bi-house-door-fill me-2"></i> Homepage</a>
               </li>
               <li class="nav-item">
-                <a href="#"><i class="bi bi-search pe-2"></i> Cerca</a>
+                <a href="#"><i class="bi bi-search me-2"></i> Cerca</a>
               </li>
               <li class="nav-item">
-                <a href="#"><i class="bi bi-list pe-2"></i> La tua libreria</a>
+                <a href="#"><i class="bi bi-list me-2"></i> La tua libreria</a>
               </li>
             </ul>
           </div>
           <div id="myfunction" class="mt-3">
             <ul class="properties px-0 py-2">
               <li class="item-function">
-                <a href="#"><i class="bi bi-plus-square pe-2"></i> Crea Playlist</a>
+                <a href="#"><i class="bi bi-plus-square me-2"></i> Crea Playlist</a>
               </li>
               <li class="item-function">
-                <a href="#"><i class="bi bi-heart pe-2"></i>Brani che ti piacciono</a>
+                <a href="#"><i class="bi bi-heart-fill me-2"></i>Brani che ti piacciono</a>
               </li>
               <li class="item-function">
-                <a href="#"><i class="bi bi-bookmark pe-2"></i>I tuoi episodi</a>
+                <a href="#"><i class="bi bi-bookmark me-2"></i>I tuoi episodi</a>
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <p class="card-text"></p>
+                          <p class="card-text">lorem</p>
                         </div>
                       </div>
                     </div>
@@ -142,7 +142,7 @@
           </section>
           <section id="albumLike">
             <div class="d-flex justify-content-between">
-              <h4>Lorem, ipsum.</h4>
+              <h4 class="text-white">Altro di ciò che ti piace</h4>
               <a href="#">Visualizza tutto</a>
             </div>
             <div id="cardXample" class="row row-cols-5">
@@ -158,44 +158,55 @@
           </section>
         </main>
         <aside id="sidebar-right" class="col-md-3 col-md-3 bg-black text-white">
-          <div class="d-flex">
+          <div class="d-flex justify-content-between mb-3">
             <h5>Attività amici</h5>
-            <i class="bi bi-person-plus"></i>
-            <i class="bi bi-x"></i>
+            <div>
+              <a href="#"><i class="bi bi-person-plus"></i></a>
+              <a href="#"><i class="bi bi-x"></i></a>
+            </div>
           </div>
           <div id="cardFriends">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-start" alt="..." />
+            <div class="row align-items-center">
+              <div class="col-md-4 pb-5">
+                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="75px" alt="..." />
               </div>
               <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                <div class="card-body mb-3">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="small">4 ore</p>
+                  </div>
+                  <p class="card-text small">
                     This is a wider card with supporting text below as a natural lead-in to additional content. This
                     content is a little bit longer.
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
-                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-start" alt="..." />
+              <div class="col-md-4 pb-5">
+                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="75px" alt="..." />
               </div>
               <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                <div class="card-body mb-3">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="small">8 ore</p>
+                  </div>
+                  <p class="card-text small">
                     This is a wider card with supporting text below as a natural lead-in to additional content. This
                     content is a little bit longer.
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
-                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-start" alt="..." />
+              <div class="col-md-4 pb-5">
+                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="75px" alt="..." />
               </div>
               <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
+                <div class="card-body mb-3">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="small">3 giorni</p>
+                  </div>
+                  <p class="card-text small">
                     This is a wider card with supporting text below as a natural lead-in to additional content. This
                     content is a little bit longer.
                   </p>

@@ -11,6 +11,10 @@ li {
   padding-top: 1rem;
 }
 
-card {
-  width: 50px;
+/* gradient icona */
+
+#heart {
+  background: linear-gradient(133deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 177, 1) 18%, rgba(197, 235, 255, 1) 100%);
 }
+
+/* ------------------ */
