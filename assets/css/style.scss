@@ -4,6 +4,7 @@ a {
 }
 body {
   color: #fff;
+  background: linear-gradient(0deg, rgba(15, 14, 14, 1) 48%, rgba(65, 63, 63, 1) 100%);
 }
 
 ul {
@@ -14,16 +15,10 @@ li {
   padding-top: 1rem;
 }
 
-/* gradient icona */
-
-#heart {
-  background: linear-gradient(133deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 177, 1) 18%, rgba(197, 235, 255, 1) 100%);
-}
-
-/* ------------------ */
 main {
   position: relative;
 }
+
 section {
   margin: 30px;
   &#newAlbum {
@@ -58,6 +53,7 @@ footer {
 
 .containerAlbum {
   height: 200px;
+
   .card-title {
     font-size: 54px;
     text-transform: uppercase;
@@ -70,9 +66,9 @@ footer {
   img {
     height: 100%;
     width: 220px;
-    
   }
 }
+
 .listContainer {
   margin-top: 20px;
 }
@@ -80,7 +76,7 @@ footer {
   .btn {
     height: 40px;
     width: 70px;
-    border-radius:9999px;
+    border-radius: 9999px;
     font-weight: 800;
     &-success {
       color: #000;
@@ -116,12 +112,16 @@ footer {
 }
 #cardAlbum {
   padding: 10px 12.5px;
+  .customGradient {
+    background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
+  }
   .card {
     padding: 20px;
     padding-bottom: 0;
     margin: 10px;
     width: calc(100% / 5 - 20px);
     color: #fff;
+
     img {
       border-radius: 4px;
       height: 140px;
@@ -130,4 +130,11 @@ footer {
       text-align: center;
     }
   }
+}
+
+// tutte le scrollbar
+
+.scrollable {
+  max-height: 100vh;
+  overflow-y: auto;
 }
