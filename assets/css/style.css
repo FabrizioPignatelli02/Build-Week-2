@@ -204,6 +204,18 @@ footer {
   color: #fff;
   background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
 }
+
+
+#artistAlbum .card {
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 10px;
+  width: calc(20% - 20px);
+  color: #fff;
+  background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
+}
+
+
 #cardAlbum .card img {
   border-radius: 4px;
   height: 140px;
