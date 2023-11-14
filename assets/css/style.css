@@ -6,6 +6,7 @@ a {
 body {
   color: #fff;
   background: linear-gradient(0deg, rgb(15, 14, 14) 48%, rgb(65, 63, 63) 100%);
+  overflow: hidden;
 }
 
 ul {
@@ -194,4 +195,30 @@ footer {
 .scrollable {
   max-height: 100vh;
   overflow-y: auto;
+}
+
+#playlistGroup{
+  max-height: 57vh;
+  overflow-y: scroll;
+  
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
