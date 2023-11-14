@@ -140,9 +140,10 @@ footer {
   overflow-y: auto;
 }
 
+
 #playlistGroup{
   overflow-y: scroll;
-  max-height: 57vh;
+  height: 57vh;
 
 }
 
