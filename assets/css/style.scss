@@ -83,6 +83,7 @@ section {
           &.name {
             .index {
               width: 15px;
+              margin-left: 10px;
             }
             div {
               margin: 0 10px;
@@ -137,7 +138,9 @@ footer {
   img {
     height: 100%;
     width: 220px;
-    padding:30px
+    &.albumImage {
+      padding:30px
+    }
   }
 }
 
