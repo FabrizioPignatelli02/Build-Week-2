@@ -150,6 +150,12 @@ svg {
   font-size: 13px;
 }
 
+footer {
+  padding: 20px;
+  position: sticky;
+  bottom: 0;
+}
+
 .BB {
   position: absolute;
   top: 15px;

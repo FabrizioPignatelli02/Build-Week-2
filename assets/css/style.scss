@@ -21,11 +21,7 @@ main {
 }
 
 #content {
-<<<<<<< Updated upstream
-  max-height: 88vh;
-=======
   max-height: calc(100vh - 80px);
->>>>>>> Stashed changes
 }
 
 #playlistGroup {
@@ -164,7 +160,6 @@ svg {
     }
   }
 }
-<<<<<<< Updated upstream
 
 #cardFriends {
   font-size: 13px;
@@ -176,8 +171,6 @@ footer {
   bottom: 0;
 }
 
-=======
->>>>>>> Stashed changes
 .BB {
   position: absolute;
   top: 15px;
