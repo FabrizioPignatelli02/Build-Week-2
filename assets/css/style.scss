@@ -21,15 +21,84 @@ main {
 
 section {
   margin: 30px;
-  &#newAlbum {
+  &#newAlbum,
+  &#thisAlbum {
     margin: 60px 50px 10px 50px;
   }
 }
 
+#thisAlbum {
+  .card {
+    background-color: unset;
+    border: none;
+    color: white;
+    &.mainAlbum .card-body {
+      padding: 1rem;
+      line-height: 80px;
+      .card-text {
+        font-size: 12px;
+        .imgSmall {
+          border-radius: 50%;
+          height: 20px;
+          width: 20px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+        & .time {
+          color: #d3d3d37a;
+        }
+        & .anno::before,
+        & .anno::after {
+          content: "";
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          background-color: #fff;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+  .listContainer {
+    margin-top: 50px;
+    .list {
+      table * {
+        color: white;
+        background-color: rgb(15, 14, 14);
+        th {
+          font-size: 14px;
+          padding: 15px 5px;
+        }
+        td {
+          padding: 15px 0;
+          font-size: 12px;
+          border: none;
+          &.name {
+            .index {
+              width: 15px;
+            }
+            div {
+              margin: 0 10px;
+            }
+            p {
+              margin: 0;
+            }
+            .artist {
+              color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  // position: fixed;
+  // bottom: 0;
+  //  width: 100%;
   padding: 20px;
 }
 
