@@ -22,7 +22,7 @@ main {
 }
 
 #content {
-  max-height: 88vh;
+  max-height: calc(100vh - 80px);
 }
 
 #playlistGroup {
@@ -274,36 +274,27 @@ footer {
   overflow-y: auto;
 }
 
+footer {
+  padding: 5px 20px;
+  position: relative;
+  bottom: 0;
+  height: 80px;
+}
+
 .musicPlayer {
   --primary-color: #ddd;
-  --secondary-color: #999;
-  --green-color: #2d5;
-  --padding: 1em;
-  height: 4rem;
-  padding: var(--padding);
   color: var(--primary-color);
 }
 .musicPlayer i {
-  color: var(--secondary-color);
+  color: grey;
 }
 .musicPlayer i:hover {
   color: var(--primary-color);
 }
-.musicPlayer .songsBar {
-  position: absolute;
-  left: var(--padding);
-  gap: 1.5rem;
-  width: 25%;
-}
-.musicPlayer .songsInfo {
-  gap: 1em;
-}
 .musicPlayer .songsImg {
-  --size: 4.5em;
-  flex-shrink: 0;
-  width: var(--size);
-  height: var(--size);
-  padding-left: var(--padding);
+  width: 75px;
+  height: 50px;
+  padding-left: 8px;
 }
 .musicPlayer .songsImg img {
   width: 100%;
@@ -311,33 +302,28 @@ footer {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.musicPlayer .songsDescription p {
-  margin: 0.2em;
-}
 .musicPlayer .songsTitle,
 .musicPlayer .songsArtist {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
+  font-size: 12px;
+  margin: 0;
+  margin-inline: 15px;
 }
 .musicPlayer .songsTitle:hover,
 .musicPlayer .songsArtist:hover {
   text-decoration: underline;
 }
 .musicPlayer .songsArtist {
-  color: var(--secondary-color);
-}
-.musicPlayer .icons {
-  gap: 1em;
+  color: grey;
 }
 .musicPlayer .progress-controller {
   width: 100%;
-  gap: 1.5em;
-  color: var(--secondary-color);
+  color: grey;
+}
+.musicPlayer .progress-controller a {
+  padding: 0 5px;
 }
 .musicPlayer .progress-controller .control-buttons {
-  gap: 2em;
+  padding-top: 5px;
 }
 .musicPlayer .progress-controller .play-pause {
   display: inline-block;
@@ -352,32 +338,32 @@ footer {
 }
 .musicPlayer .progress-controller .progressContainer {
   width: 100%;
-  gap: 1em;
+  padding-top: 5px;
 }
 .musicPlayer .progress-controller .progressContainer .progressBar {
   height: 4px;
   border-radius: 10px;
   width: 30%;
   background-color: rgba(204, 204, 204, 0.2666666667);
+  margin: 0 10px;
 }
 .musicPlayer .progress-controller .progressContainer .progressBar:hover .progress {
-  background-color: var(--green-color);
+  background-color: lime;
 }
 .musicPlayer .progress-controller .progressContainer .progressBar:hover .progress::after {
   content: "";
   position: absolute;
-  --size: 1em;
-  width: var(--size);
-  height: var(--size);
+  width: 16px;
+  height: 16px;
   right: 0;
   border-radius: 50%;
   background-color: var(--primary-color);
-  transform: translate(50%, calc(2px - 50%));
+  transform: translate(50%, 50%);
 }
 .musicPlayer .progress-controller .progressContainer .progress {
   position: relative;
   height: 100%;
   width: 50%;
   border-radius: 10px;
-  background-color: var(--secondary-color);
+  background-color: grey;
 }/*# sourceMappingURL=style.css.map */

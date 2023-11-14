@@ -12,8 +12,7 @@ const fetchData = async (index) => {
         "X-RapidAPI-Host": apiHost,
       },
     });
-    const data = await response.json();
-    console.log(data);
+    const data = await response.json();    
     return data.data[0];
   } catch (error) {
     console.error("Error:", error);
@@ -22,7 +21,7 @@ const fetchData = async (index) => {
 
 const updateAlbum = async (index) => {
   const albumData = await fetchData(index);
-  console.log(albumData);
+  
   document.querySelector(".albumImage").src = albumData.album.cover;
   document.querySelector(".card-title").innerHTML = albumData.title;
   document.querySelector(".card-text").innerHTML = albumData.artist.name;
@@ -48,8 +47,7 @@ artistId.forEach((id) => {
       return resp.json();
     })
     .then((artistObj) => {
-      console.log("artistObj", artistObj);
-
+      
       const cardDiv = document.createElement("div");
       cardDiv.classList.add("card");
       cardDiv.classList.add("bg-dark");
@@ -57,10 +55,8 @@ artistId.forEach((id) => {
       const artistImg = document.createElement("img");
       artistImg.classList.add("card-img-top");
       const artistUrlImage = artistObj.picture;
-      console.log("artistUrl", artistUrlImage);
-      artistImg.src = artistUrlImage;
 
-      console.log("img", artistImg);
+      artistImg.src = artistUrlImage;      
 
       const cardBodyDiv = document.createElement("div");
       cardBodyDiv.classList.add("card-body");
@@ -70,8 +66,7 @@ artistId.forEach((id) => {
       nameArtist.classList.add("card-title");
       nameArtist.innerText = artistObj.name;
       nameArtist.href = `./artist.html?id=${id}`;
-
-      console.log("nome", nameArtist);
+      
 
       const type = document.createElement("p");
       type.classList.add("card-text");
