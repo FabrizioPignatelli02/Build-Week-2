@@ -1,6 +1,9 @@
 const playlist = document.querySelectorAll('[class*="playlist"]');
 
-const coord = [12, 13, 14, 23, 24, 25, 26, 27, 28, 31, 35, 36, 37, 38, 40, 42, 43, 44, 45, 46, 47, 48, 50, 51, 52, 54, 55, 56, 58, 59, 60, 62, 65, 66, 67, 68, 87];
+const coord = [
+  12, 13, 14, 23, 24, 25, 26, 27, 28, 31, 35, 36, 37, 38, 40, 42, 43, 44, 45, 46, 47, 48, 50, 51, 52, 54, 55, 56, 58,
+  59, 60, 62, 65, 66, 67, 68, 87,
+];
 const randomIndex = Math.floor(Math.random() * coord.length);
 const randomCoord = coord[randomIndex];
 

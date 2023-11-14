@@ -9,8 +9,8 @@ const fetchData = async (index) => {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": apiKey,
-        "X-RapidAPI-Host": apiHost
-      }
+        "X-RapidAPI-Host": apiHost,
+      },
     });
     const data = await response.json();
     console.log(data);
@@ -25,8 +25,65 @@ const updateAlbum = async (index) => {
   console.log(albumData);
   document.querySelector(".albumImage").src = albumData.album.cover;
   document.querySelector(".card-title").innerHTML = albumData.title;
-  document.querySelector(".card-text").innerHTML = albumData.artist.name;  
+  document.querySelector(".card-text").innerHTML = albumData.artist.name;
 };
 
 updateAlbum(currentIndex);
 
+const artistAlbum = document.getElementById("artistAlbum");
+const URL = "https://deezerdevs-deezer.p.rapidapi.com/artist/";
+
+const artistId = ["4999707", "6550", "169850", "5866223", "140"];
+
+artistId.forEach((id) => {
+  const newURL = URL + id;
+  fetch(newURL, {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "e32af77647mshc0813668c60e362p1797cajsn98f9343fa805",
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    },
+  })
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((artistObj) => {
+      console.log("artistObj", artistObj);
+
+      const cardDiv = document.createElement("div");
+      cardDiv.classList.add("card");
+      cardDiv.classList.add("bg-dark");
+
+      const artistImg = document.createElement("img");
+      artistImg.classList.add("card-img-top");
+      const artistUrlImage = artistObj.picture;
+      console.log("artistUrl", artistUrlImage);
+      artistImg.src = artistUrlImage;
+
+      console.log("img", artistImg);
+
+      const cardBodyDiv = document.createElement("div");
+      cardBodyDiv.classList.add("card-body");
+
+      const nameArtist = document.createElement("a");
+      nameArtist.classList.add("text-white");
+      nameArtist.classList.add("card-title");
+      nameArtist.innerText = artistObj.name;
+      nameArtist.href = `./artist.html?id=${id}`;
+
+      console.log("nome", nameArtist);
+
+      const type = document.createElement("p");
+      type.classList.add("card-text");
+      type.classList.add("text-secondary");
+      type.innerText = artistObj.type;
+
+      cardBodyDiv.appendChild(nameArtist);
+      cardBodyDiv.appendChild(type);
+
+      cardDiv.appendChild(artistImg);
+      cardDiv.appendChild(cardBodyDiv);
+
+      artistAlbum.appendChild(cardDiv);
+    });
+});
