@@ -6,7 +6,10 @@ a {
 body {
   color: #fff;
   background: linear-gradient(0deg, rgb(15, 14, 14) 48%, rgb(65, 63, 63) 100%);
+<<<<<<< Updated upstream
   overflow-y: hidden;
+=======
+>>>>>>> Stashed changes
 }
 
 ul {
@@ -200,6 +203,7 @@ footer {
   margin: 10px;
   width: calc(20% - 20px);
   color: #fff;
+  background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
 }
 #cardAlbum .card img {
   border-radius: 4px;
@@ -219,6 +223,7 @@ footer {
   overflow-y: scroll;
 }
 
+<<<<<<< Updated upstream
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -238,3 +243,112 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+=======
+.musicPlayer {
+  --primary-color: #ddd;
+  --secondary-color: #999;
+  --green-color: #2d5;
+  --padding: 1em;
+  height: 4rem;
+  padding: var(--padding);
+  color: var(--primary-color);
+}
+.musicPlayer i {
+  color: var(--secondary-color);
+}
+.musicPlayer i:hover {
+  color: var(--primary-color);
+}
+.musicPlayer .songsBar {
+  position: absolute;
+  left: var(--padding);
+  gap: 1.5rem;
+  width: 25%;
+}
+.musicPlayer .songsInfo {
+  gap: 1em;
+}
+.musicPlayer .songsImg {
+  --size: 4.5em;
+  flex-shrink: 0;
+  width: var(--size);
+  height: var(--size);
+  padding-left: var(--padding);
+}
+.musicPlayer .songsImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.musicPlayer .songsDescription p {
+  margin: 0.2em;
+}
+.musicPlayer .songsTitle,
+.musicPlayer .songsArtist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.musicPlayer .songsTitle:hover,
+.musicPlayer .songsArtist:hover {
+  text-decoration: underline;
+}
+.musicPlayer .songsArtist {
+  color: var(--secondary-color);
+}
+.musicPlayer .icons {
+  gap: 1em;
+}
+.musicPlayer .progress-controller {
+  width: 100%;
+  gap: 1.5em;
+  color: var(--secondary-color);
+}
+.musicPlayer .progress-controller .control-buttons {
+  gap: 2em;
+}
+.musicPlayer .progress-controller .play-pause {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  color: #111;
+  border-radius: 50%;
+}
+.musicPlayer .progress-controller .play-pause:hover {
+  transform: scale(1.1);
+  color: #111;
+}
+.musicPlayer .progress-controller .progressContainer {
+  width: 100%;
+  gap: 1em;
+}
+.musicPlayer .progress-controller .progressContainer .progressBar {
+  height: 4px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: rgba(204, 204, 204, 0.2666666667);
+}
+.musicPlayer .progress-controller .progressContainer .progressBar:hover .progress {
+  background-color: var(--green-color);
+}
+.musicPlayer .progress-controller .progressContainer .progressBar:hover .progress::after {
+  content: "";
+  position: absolute;
+  --size: 1em;
+  width: var(--size);
+  height: var(--size);
+  right: 0;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translate(50%, calc(2px - 50%));
+}
+.musicPlayer .progress-controller .progressContainer .progress {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> Stashed changes

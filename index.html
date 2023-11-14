@@ -124,7 +124,7 @@
           <a href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
           <section id="newAlbum">
             <div class="containerAlbum">
-              <div class="card customGradient text-white">
+              <div class="card">
                 <div class="row flex-nowrap align-items-center">
                   <img class="albumImage" />
                   <div class="card-body">
@@ -326,10 +326,48 @@
       </div>
     </div>
 
-    <footer class="d-flex sticky-lg-bottom justify-content-between bg-dark text-white">
-      <div>1'0000000000000000000</div>
-      <div>2</div>
-      <div>3</div>
+    <footer id="playbar" class="bg-dark text-white">
+      <div class="musicPlayer d-flex justify-content-between align-items-center">
+        <div class="songsBar d-flex flex-row justify-content-start align-items-center">
+          <div class="songsInfo d-flex align-items-center">
+            <div class="songsImg">
+              <img src="./assets/imgs/main/image-8.jpg" alt="" width="100px" />
+            </div>
+            <div class="songsDescription ms-3">
+              <p class="songsTitle">Titolo</p>
+              <p class="songsArtist">Artista</p>
+            </div>
+          </div>
+          <div class="icons ps-2">
+            <a href="#"><i class="bi bi-heart"></i></a>
+          </div>
+        </div>
+        <div class="progress-controller d-flex justify-content-center flex-column align-items-center">
+          <div class="control-buttons d-flex align-items-center">
+            <a href="#"><i class="bi bi-shuffle"></i></a>
+            <a href="#"><i class="bi bi-skip-start-circle"></i></a>
+            <a href="#"><i class="play-pause bi bi-play-circle"></i></a>
+            <a href="#"><i class="bi bi-skip-end-circle"></i></a>
+            <a href="#"><i class="bi bi-repeat"></i></a>
+          </div>
+          <div class="progressContainer d-flex align-items-center justify-content-center">
+            <span>0:00</span>
+            <div class="progressBar">
+              <div class="progress"></div>
+            </div>
+            <span>0:30</span>
+          </div>
+        </div>
+        <div class="otherFeatures d-flex flex-row justify-content-between">
+          <a href="#"><i class="bi bi-menu-button-wide"></i></a>
+          <div class="volumeBar d-flex align-items-center ps-3 pe-5">
+            <a href="#"><i class="bi bi-volume-up"></i></a>
+            <div class="progressBar">
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <div class="bg-black sticky-bottom d-block d-lg-none p-0">
       <nav class="navbar">
