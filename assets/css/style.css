@@ -21,6 +21,11 @@ main {
   position: relative;
 }
 
+#content{
+  max-height: 95vh;
+  overflow-x: hidden;
+}
+
 section {
   margin: 30px;
 }
