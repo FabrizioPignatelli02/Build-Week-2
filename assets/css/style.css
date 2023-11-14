@@ -120,6 +120,11 @@ footer {
   width: calc(20% - 20px);
   color: #fff;
 }
+
+#albumImage{
+  padding: 20px;
+}
+
 #cardAlbum .card img {
   border-radius: 4px;
   height: 140px;
