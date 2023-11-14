@@ -6,6 +6,7 @@ a {
 body {
   color: #fff;
   background: linear-gradient(0deg, rgba(15, 14, 14, 1) 48%, rgba(65, 63, 63, 1) 100%);
+  overflow: hidden;
 }
 
 ul {
@@ -29,9 +30,9 @@ section#newAlbum {
 
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: 50px;
   width: 100%;
-  padding: 20px;
+  padding: 25px;
 }
 
 .BB {
