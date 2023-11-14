@@ -26,6 +26,11 @@ section {
     margin: 60px 50px 10px 50px;
   }
 }
+#newAlbum {
+  .customGradient {
+    background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
+  }
+}
 
 #thisAlbum {
   .card {
@@ -96,9 +101,6 @@ section {
 }
 
 footer {
-  // position: fixed;
-  // bottom: 0;
-  //  width: 100%;
   padding: 20px;
 }
 
@@ -135,6 +137,7 @@ footer {
   img {
     height: 100%;
     width: 220px;
+    padding:30px
   }
 }
 

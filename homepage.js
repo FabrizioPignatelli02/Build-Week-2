@@ -21,26 +21,25 @@ const fetchData = async (index) => {
 
 const updateAlbum = async (index) => {
   const albumData = await fetchData(index);
-  document.getElementById("albumImage").src = albumData.album.cover;
-  document.getElementById("card-title").textContent = albumData.album.title;
-  document.getElementById("card-text").textContent = albumData.artist.name;
-  document.getElementById("card-description").textContent = albumData.description;
+  document.querySelector(".albumImage").src = albumData.album.cover;
+  document.querySelector(".card-title").innerHTML = albumData.album.title;
+  document.querySelector(".card-text").innerHTML = albumData.artist.name;
+  document.querySelector(".card-description").innerHTML ?  albumData.description : "";
 };
 
 updateAlbum(currentIndex);
 
-document.getElementById("next").addEventListener("click", () => {
+document.querySelector(".btn-B").addEventListener("click", () => {
   if (currentIndex < maxElement - 1) {
     currentIndex++;
     updateAlbum(currentIndex);
   }
 });
 
-document.getElementById("back").addEventListener("click", () => {
+document.querySelector(".btn-N").addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
     updateAlbum(currentIndex);
   }
 });
 
-console.log(currentIndex);
