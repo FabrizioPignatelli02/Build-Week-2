@@ -91,7 +91,7 @@ section#newAlbum, section#thisAlbum {
 
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: 55px;
   width: 100%;
   padding: 20px;
 }
@@ -198,4 +198,30 @@ footer {
 .scrollable {
   max-height: 100vh;
   overflow-y: auto;
+}
+
+#playlistGroup{
+  max-height: 57vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
