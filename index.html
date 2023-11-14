@@ -17,7 +17,7 @@
   <body class="">
     <div class="container-fluid">
       <div class="row">
-        <nav id="sidebar-left" class="col-md-3 bg-black text-white">
+        <nav id="sidebar-left" class="col-md-2 bg-black text-white">
           <div class="btn-group">
             <button
               class="btn btn-black text-white btn-sm dropdown-toggle"
@@ -58,17 +58,18 @@
         </nav>
 
         <main id="content" class="col-md-7 scrollable">
-          <a href="#back" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
-          <a href="#next" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
+          <a id="back" href="" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
+          <a id="next" href="" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
           <section id="newAlbum">
             <div class="containerAlbum">
               <div class="card customGradient text-white">
                 <div class="row flex-nowrap">
-                  <img src="./assets/imgs/main/image-19.jpg" alt="album casual" />
+                  <img id="albumImage" src="./assets/imgs/main/image-19.jpg" alt="album casual" />
                   <div class="card-body">
-                    <h2 class="card-title">Album casuale</h2>
-                    <h4 class="card-text">Album casuale artisti</h4>
-                    <p class="card-text text2">Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                    <h6>Album</h6>
+                    <h2 id="card-title" class="card-title">Album casuale</h2>
+                    <h4 id="card-text" class="card-text">Album casuale artisti</h4>
+                    <p id="card-description" class="card-text text2">Ascolta il nuovo singolo di Fedez e Salmo!</p>
                     <div class="btnContainer">
                       <a href="#" class="btn btn-success">Play</a>
                       <a href="#" class="btn btn-dark">Salva</a>
@@ -78,7 +79,7 @@
               </div>
             </div>
             <div class="listContainer">
-              <h3>Buonasera</h3>
+              <h3 class="mt-5 mb-3">Buonasera</h3>
               <div class="cardList mx-4">
                 <div class="row row-cols-3 flex-wrap">
                   <div class="card mb-3 me-1">
@@ -165,7 +166,7 @@
             </div>
           </section>
         </main>
-        <aside id="sidebar-right" class="col-md-2 col-md-2 bg-black text-white">
+        <aside id="sidebar-right" class="col-md-3 bg-black text-white">
           <div class="d-flex justify-content-between mb-3">
             <h5>Attività amici</h5>
             <div>
@@ -181,13 +182,11 @@
               <div class="col-md-8">
                 <div class="card-body mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Charlie Hookman</h5>
                     <p class="small">4 ore</p>
                   </div>
-                  <p class="card-text small">
-                    This is a wider card with supporting text below as a natural lead-in to additional content. This
-                    content is a little bit longer.
-                  </p>
+                  <p class="card-text small">In Camera <i class="bi bi-dot"></i> Yumi Zouma</p>
+                  <p><i class="bi bi-stop-circle"></i> EP III</p>
                 </div>
               </div>
               <div class="col-md-4 pb-5">
@@ -196,13 +195,11 @@
               <div class="col-md-8">
                 <div class="card-body mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">LightDark02</h5>
                     <p class="small">8 ore</p>
                   </div>
-                  <p class="card-text small">
-                    This is a wider card with supporting text below as a natural lead-in to additional content. This
-                    content is a little bit longer.
-                  </p>
+                  <p class="card-text small">Aimed To Kill <i class="bi bi-dot"></i> Jade LeMac</p>
+                  <p><i class="bi bi-stop-circle"></i> Aimed To Kill</p>
                 </div>
               </div>
               <div class="col-md-4 pb-5">
@@ -211,13 +208,11 @@
               <div class="col-md-8">
                 <div class="card-body mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Valeria Traverso</h5>
                     <p class="small">3 giorni</p>
                   </div>
-                  <p class="card-text small">
-                    This is a wider card with supporting text below as a natural lead-in to additional content. This
-                    content is a little bit longer.
-                  </p>
+                  <p class="card-text small">New Kings <i class="bi bi-dot"></i> Sleeping Wall</p>
+                  <p><i class="bi bi-music-note-beamed"></i> Twint Badass Mood</p>
                 </div>
               </div>
             </div>
