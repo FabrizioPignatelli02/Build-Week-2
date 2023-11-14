@@ -66,17 +66,16 @@ svg {
   background-color: #7b7b7b;
   background-size: contain;
   font-size: 25px;
-  overflow: auto;
 }
 
 .heart {
   background: linear-gradient(138deg, rgb(80, 25, 163) 0%, rgb(58, 27, 88) 11%, rgb(138, 110, 176) 97%, rgb(138, 73, 137) 100%, rgb(163, 25, 160) 100%);
-  padding: 4px;
+  padding: 4.4px;
 }
 
 .mark {
   background-color: #045639;
-  padding: 4px;
+  padding: 4.4px;
 }
 
 #newAlbum .customGradient {
