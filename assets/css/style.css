@@ -6,10 +6,7 @@ a {
 body {
   color: #fff;
   background: linear-gradient(0deg, rgb(15, 14, 14) 48%, rgb(65, 63, 63) 100%);
-<<<<<<< Updated upstream
   overflow-y: hidden;
-=======
->>>>>>> Stashed changes
 }
 
 ul {
@@ -25,7 +22,7 @@ main {
 }
 
 #content{
-  max-height: 95vh;
+  max-height: 90vh;
   overflow-x: hidden;
 }
 
@@ -113,6 +110,8 @@ svg{
 
 footer {
   padding: 20px;
+  position: sticky;
+  bottom: 0;
 }
 
 .BB {
@@ -219,11 +218,10 @@ footer {
 }/*# sourceMappingURL=style.css.map */
 
 #playlistGroup{
-  max-height: 57vh;
+  max-height: 50vh;
   overflow-y: scroll;
 }
 
-<<<<<<< Updated upstream
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -243,7 +241,6 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-=======
 .musicPlayer {
   --primary-color: #ddd;
   --secondary-color: #999;
@@ -351,4 +348,3 @@ footer {
   border-radius: 10px;
   background-color: var(--secondary-color);
 }/*# sourceMappingURL=style.css.map */
->>>>>>> Stashed changes
