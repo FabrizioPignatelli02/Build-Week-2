@@ -245,6 +245,28 @@ footer {
   }
 }
 
+
+#artistAlbum {
+  padding: 10px 12.5px;
+
+  .card {
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 10px;
+    width: calc(100% / 5 - 20px);
+    color: #fff;
+    background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
+    img {
+      border-radius: 4px;
+      height: 140px;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+  }
+}
+
 // tutte le scrollbar
 
 .scrollable {
