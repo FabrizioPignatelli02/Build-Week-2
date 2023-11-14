@@ -20,11 +20,11 @@ main {
   position: relative;
 }
 
-#content{
+#content {
   max-height: 88vh;
 }
 
-#playlistGroup{
+#playlistGroup {
   max-height: 50vh;
   overflow-y: scroll;
 }
@@ -57,9 +57,32 @@ section {
   }
 }
 
-svg{
+svg {
   width: 10%;
   fill: white;
+}
+
+.plus {
+  background-color: #7b7b7b;
+  background-size: contain;
+  font-size: 25px;
+  overflow: auto;
+}
+
+.heart {
+  background: linear-gradient(
+    138deg,
+    rgba(80, 25, 163, 1) 0%,
+    rgba(58, 27, 88, 1) 11%,
+    rgba(138, 110, 176, 1) 97%,
+    rgba(138, 73, 137, 1) 100%,
+    rgba(163, 25, 160, 1) 100%
+  );
+  padding: 4px;
+}
+.mark {
+  background-color: #045639;
+  padding: 4px;
 }
 
 #newAlbum {
@@ -248,7 +271,6 @@ footer {
     }
   }
 }
-
 
 #artistAlbum {
   padding: 10px 12.5px;
