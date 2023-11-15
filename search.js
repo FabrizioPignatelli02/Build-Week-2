@@ -11,7 +11,7 @@ const searchInput = document.getElementById("search");
 const songList = document.getElementById("songList");
 
 const searchSongs = async () => {
-  const query = searchInput.value.trim(); // Trim the query to remove leading and trailing spaces
+  const query = searchInput.value.trim();
   if (!query) return;
 
   try {
@@ -31,13 +31,25 @@ const searchSongs = async () => {
       result.data.forEach((song) => {
         const listItem = document.createElement("li");
         listItem.className = "song";
-        listItem.innerHTML = `
-            <h2>${song.artist.name}</h2>
-            <p>${song.album.title}</p>
-            <p>${song.title}</p>
-            <img src="${song.artist.picture}" alt="${song.artist.name}">
-            <p>${song.album.tracklist}</p>
-          `;
+        const h2 = document.createElement("h2");
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        const img = document.createElement("img");
+        const p3 = document.createElement("p");
+
+        h2.textContent = song.artist.name;
+        p1.textContent = song.album.title;
+        p2.textContent = song.title;
+        img.src = song.artist.picture;
+        img.alt = song.artist.name;
+        p3.textContent = song.album.tracklist;
+
+        listItem.appendChild(h2);
+        listItem.appendChild(p1);
+        listItem.appendChild(p2);
+        listItem.appendChild(img);
+        listItem.appendChild(p3);
+
         songList.appendChild(listItem);
       });
     }
