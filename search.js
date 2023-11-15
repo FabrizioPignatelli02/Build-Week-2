@@ -35,11 +35,11 @@ const searchSongs = async () => {
         const imgContainer = document.createElement("div");
         imgContainer.className = "image-container";
 
-        const img = document.createElement("img");
-        img.src = song.artist.picture;
-        img.alt = song.artist.name;
-
-        imgContainer.appendChild(img);
+        // imgContainer.style.width = "120px"
+        // imgContainer.style.height = "120px"
+        // imgContainer.style.backgroundImage = song.artist.picture
+        // console.log(song.artist);
+        imgContainer.style =`width:120px;height:120px; margin:auto; background-image: url(${song.artist.picture}); background-position:center; ;background-size:cover ;background-repeat:no-repeat`
 
         const textContainer = document.createElement("div");
         textContainer.className = "text-container";
@@ -65,10 +65,10 @@ const searchSongs = async () => {
         logo.alt = "logo.svg";
 
         logoContainer.appendChild(logo);
-
+        
+        imgContainer.appendChild(logoContainer);
         listItem.appendChild(imgContainer);
         listItem.appendChild(textContainer);
-        listItem.appendChild(logoContainer);
 
         songList.appendChild(listItem);
       });

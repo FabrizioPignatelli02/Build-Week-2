@@ -390,8 +390,8 @@ footer {
 
 .logo-container img {
   position: absolute;
-  top: -230px;
-  left: 33px;
+  top: -5px;
+  left: 0px;
   max-width: 10px;
   max-height: 10px;
   margin: 10px;
