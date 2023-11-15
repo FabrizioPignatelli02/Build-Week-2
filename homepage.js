@@ -9,10 +9,10 @@ const fetchData = async (index) => {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": apiKey,
-        "X-RapidAPI-Host": apiHost,
-      },
+        "X-RapidAPI-Host": apiHost
+      }
     });
-    const data = await response.json();    
+    const data = await response.json();
     return data.data[0];
   } catch (error) {
     console.error("Error:", error);
@@ -21,7 +21,7 @@ const fetchData = async (index) => {
 
 const updateAlbum = async (index) => {
   const albumData = await fetchData(index);
-  
+
   document.querySelector(".albumImage").src = albumData.album.cover;
   document.querySelector(".card-title").innerHTML = albumData.title;
   document.querySelector(".card-text").innerHTML = albumData.artist.name;
@@ -40,14 +40,13 @@ artistId.forEach((id) => {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": "e32af77647mshc0813668c60e362p1797cajsn98f9343fa805",
-      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    },
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+    }
   })
     .then((resp) => {
       return resp.json();
     })
     .then((artistObj) => {
-      
       const cardDiv = document.createElement("div");
       cardDiv.classList.add("card");
       cardDiv.classList.add("bg-dark");
@@ -56,7 +55,7 @@ artistId.forEach((id) => {
       artistImg.classList.add("card-img-top");
       const artistUrlImage = artistObj.picture;
 
-      artistImg.src = artistUrlImage;      
+      artistImg.src = artistUrlImage;
 
       const cardBodyDiv = document.createElement("div");
       cardBodyDiv.classList.add("card-body");
@@ -66,7 +65,6 @@ artistId.forEach((id) => {
       nameArtist.classList.add("card-title");
       nameArtist.innerText = artistObj.name;
       nameArtist.href = `./artist.html?id=${id}`;
-      
 
       const type = document.createElement("p");
       type.classList.add("card-text");
@@ -82,3 +80,11 @@ artistId.forEach((id) => {
       artistAlbum.appendChild(cardDiv);
     });
 });
+
+// search
+
+function tryToSearch() {
+  const input = document.getElementById("search");
+
+  input.style.display = input.style.display === "none" || input.style.display === "" ? "block" : "none";
+}

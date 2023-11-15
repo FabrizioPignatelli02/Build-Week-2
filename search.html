@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body class>
     <div class="container-fluid">
       <div class="row">
         <nav id="sidebar-left" class="d-none d-xl-block col-md-2 bg-black text-white pe-0">
@@ -27,17 +27,13 @@
             >
               <i class="bi bi-three-dots"></i>
             </button>
-            <ul class="dropdown-menu">
-              <li class="p-2">File</li>
-              <li class="p-2">Contatti</li>
-              <li class="p-2">Impostazioni</li>
-            </ul>
+            <ul class="dropdown-menu"></ul>
           </div>
           <div id="icon-navbar">
             <ul class="navbar-nav mt-2">
               <li class="nav-item">
-                <a href="./index.html">
-                  <svg
+                <a href="./index.html"
+                  ><svg
                     data-encore-id="icon"
                     role="img"
                     aria-hidden="true"
@@ -48,8 +44,8 @@
                       d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"
                     ></path>
                   </svg>
-                  Homepage
-                </a>
+                  Homepage</a
+                >
               </li>
               <li class="nav-item">
                 <a href="#" onclick="tryToSearch()"
@@ -67,9 +63,16 @@
                   Cerca
                 </a>
                 <div id="searchContainer">
-                  <input type="text" id="search" style="display: none" placeholder="Cosa vuoi ascoltare?" />
+                  <input
+                    type="text"
+                    name="searchBar"
+                    id="search"
+                    style="display: none"
+                    placeholder="Cosa vuoi ascoltare?"
+                  />
                 </div>
               </li>
+
               <li class="nav-item">
                 <a href="#"
                   ><svg
@@ -91,13 +94,13 @@
           <div id="myfunction" class="mt-3 border-bottom border-secondary">
             <ul class="properties px-0 py-2">
               <li class="item-function">
-                <a href="#"><i class="plus bi bi-plus-square me-2"></i> Crea Playlist</a>
+                <a href="#"><i class="bi bi-plus-square me-2"></i> Crea Playlist</a>
               </li>
               <li class="item-function">
-                <a href="#"><i class="heart bi bi-heart-fill me-2"></i>Brani che ti piacciono</a>
+                <a href="#"><i class="bi bi-heart-fill me-2"></i>Brani che ti piacciono</a>
               </li>
               <li class="item-function">
-                <a href="#"><i class="mark bi bi-bookmark me-2"></i>I tuoi episodi</a>
+                <a href="#"><i class="bi bi-bookmark me-2"></i>I tuoi episodi</a>
               </li>
             </ul>
           </div>
@@ -122,124 +125,26 @@
           </div>
         </nav>
 
-        <main id="content" class="col-md-12 col-lg-7 scrollable">
-          <a href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
-          <a href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
-          <section id="newAlbum">
+        <main id="content" class="col-md-7 scrollable">
+          <a id="back" href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
+          <a id="next" href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
+          <section id="thisAlbum">
             <div class="containerAlbum">
-              <div class="card customGradient">
-                <div class="row flex-nowrap align-items-center">
-                  <img class="albumImage" />
-                  <div class="card-body">
-                    <h6>Album</h6>
-                    <h2 class="card-title fs-3"></h2>
-                    <h4 class="card-text"></h4>
-                    <p class="card-description text2"></p>
-                    <div class="btnContainer">
-                      <a href="#" class="btn btn-success">Play</a>
-                      <a href="#" class="btn btn-dark">Salva</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="card d-flex flex-row mainAlbum"></div>
             </div>
             <div class="listContainer">
-              <h3 class="mt-5 mb-3">Playlist</h3>
-              <div class="cardList mx-4">
-                <div class="row row-cols-3 flex-wrap">
-                  <div class="card mb-3 me-1 playlist1s2">
-                    <div class="card-body">
-                      <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="..." />
-                      <p class="card-text">Gym songs</p>
-                    </div>
-                  </div>
-                  <div class="card mb-3 me-1 playlist23">
-                    <div class="card-body">
-                      <img src="./assets/imgs/main/image-2.jpg" class="img-fluid rounded-start" alt="..." />
-                      <p class="card-text">Relax Beat</p>
-                    </div>
-                  </div>
-                  <div class="card mb-3 me-1 playlist31">
-                    <div class="card-body">
-                      <img src="./assets/imgs/main/image-3.jpg" class="img-fluid rounded-start" alt="..." />
-                      <p class="card-text">Concentrazione Massima</p>
-                    </div>
-                  </div>
-                  <div class="card mb-3 me-1 playlist45">
-                    <div class="card-body">
-                      <img src="./assets/imgs/main/image-4.jpg" class="img-fluid rounded-start" alt="..." />
-                      <p class="card-text">By the piano</p>
-                    </div>
-                  </div>
-                  <div class="card mb-3 me-1 playlist52">
-                    <div class="card-body">
-                      <img src="./assets/imgs/main/image-5.jpg" class="img-fluid rounded-start" alt="..." />
-                      <p class="card-text">Verso il cielo</p>
-                    </div>
-                  </div>
-                  <div class="card mb-3 me-1 playlist60">
-                    <div class="card-body">
-                      <img src="./assets/imgs/main/image-6.jpg" class="img-fluid rounded-start" alt="..." />
-                      <p class="card-text">Summer Vibes</p>
-                    </div>
-                  </div>
-                </div>
+              <div class="Icons"></div>
+              <div class="list">
+                <div class="table-responsive"></div>
               </div>
             </div>
-          </section>
-          <section id="albumLike">
-            <div class="d-flex justify-content-between">
-              <h4 class="text-white">Altro di ciò che ti piace</h4>
-              <a href="#">Visualizza tutto</a>
+            <div class="searchContainer">
+              <ul id="songList"></ul>
             </div>
-            <div id="cardAlbum" class="row row-cols-5">
-              <div class="card bg-dark">
-                <img src="./assets/imgs/main/image-10.jpg" class="card-img-top" alt="album-1" />
-                <div class="card-body">
-                  <h5 class="card-title">Playlist 1</h5>
-                  <p class="card-text text-secondary">Playlist N.1</p>
-                </div>
-              </div>
-              <div class="card bg-dark">
-                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top" alt="album-2" />
-                <div class="card-body">
-                  <h5 class="card-title">Playlist 2</h5>
-                  <p class="card-text text-secondary">Playlist N.2</p>
-                </div>
-              </div>
-              <div class="card bg-dark">
-                <img src="./assets/imgs/main/image-12.jpg" class="card-img-top" alt="album-3" />
-                <div class="card-body">
-                  <h5 class="card-title">Playlist 3</h5>
-                  <p class="card-text text-secondary">Playlist N.3</p>
-                </div>
-              </div>
-              <div class="card bg-dark">
-                <img src="./assets/imgs/main/image-13.jpg" class="card-img-top" alt="album-4" />
-                <div class="card-body">
-                  <h5 class="card-title">Playlist 4</h5>
-                  <p class="card-text text-secondary">Playlist N.4</p>
-                </div>
-              </div>
-              <div class="card bg-dark">
-                <img src="./assets/imgs/main/image-14.jpg" class="card-img-top" alt="album-5" />
-                <div class="card-body">
-                  <h5 class="card-title">Playlist 5</h5>
-                  <p class="card-text text-secondary">Playlist N.5</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section id="artistiLike">
-            <div class="d-flex justify-content-between">
-              <h4 class="text-white">Artisti consigliati</h4>
-              <a href="#">Visualizza tutto</a>
-            </div>
-            <div id="artistAlbum" class="row row-cols-5"></div>
           </section>
         </main>
         <aside id="sidebar-right" class="d-none d-xl-block col-md-3 bg-black text-white">
-          <div class="d-flex justify-content-between mt-2 mb-3">
+          <div class="d-flex justify-content-between mb-3">
             <h5>Attività amici</h5>
             <div>
               <a href="#"><i class="bi bi-person-plus"></i></a>
@@ -248,43 +153,42 @@
           </div>
           <div id="cardFriends">
             <div class="row align-items-center">
-              <div class="col-md-4 mt-3 pb-5">
-                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="35px" alt="..." />
+              <div class="col-md-4 pb-5">
+                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="75px" alt="..." />
               </div>
               <div class="col-md-8">
                 <div class="card-body mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="card-title mb-0">Charlie Hookman</h5>
-                    <p class="small mb-0">4 ore</p>
+                    <h5 class="card-title">Charlie Hookman</h5>
+                    <p class="small">4 ore</p>
                   </div>
-
-                  <p class="card-text small mb-0">In Camera <i class="bi bi-dot"></i> Yumi Zouma</p>
+                  <p class="card-text small">In Camera <i class="bi bi-dot"></i> Yumi Zouma</p>
                   <p><i class="bi bi-stop-circle"></i> EP III</p>
                 </div>
               </div>
-              <div class="col-md-4 mt-3 pb-5">
-                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="35px" alt="..." />
+              <div class="col-md-4 pb-5">
+                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="75px" alt="..." />
               </div>
               <div class="col-md-8">
                 <div class="card-body mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="card-title mb-0">LightDark02</h5>
-                    <p class="small mb-0">8 ore</p>
+                    <h5 class="card-title">LightDark02</h5>
+                    <p class="small">8 ore</p>
                   </div>
-                  <p class="card-text small mb-0">Aimed To Kill <i class="bi bi-dot"></i> Jade LeMac</p>
+                  <p class="card-text small">Aimed To Kill <i class="bi bi-dot"></i> Jade LeMac</p>
                   <p><i class="bi bi-stop-circle"></i> Aimed To Kill</p>
                 </div>
               </div>
-              <div class="col-md-4 mt-3 pb-5">
-                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="35px" alt="..." />
+              <div class="col-md-4 pb-5">
+                <img src="./assets/imgs/search/image-3.jpg" class="img-fluid rounded-circle" width="75px" alt="..." />
               </div>
               <div class="col-md-8">
                 <div class="card-body mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="card-title mb-0">Valeria Traverso</h5>
-                    <p class="small mb-0">3 giorni</p>
+                    <h5 class="card-title">Valeria Traverso</h5>
+                    <p class="small">3 giorni</p>
                   </div>
-                  <p class="card-text small mb-0">New Kings <i class="bi bi-dot"></i> Sleeping Wall</p>
+                  <p class="card-text small">New Kings <i class="bi bi-dot"></i> Sleeping Wall</p>
                   <p><i class="bi bi-music-note-beamed"></i> Twint Badass Mood</p>
                 </div>
               </div>
@@ -299,14 +203,14 @@
         <div class="songsBar d-flex flex-row justify-content-start align-items-center">
           <div class="songsInfo d-flex align-items-center">
             <div class="songsImg">
-              <img src="./assets/imgs/main/image-8.jpg" alt="" />
+              <img src="./assets/imgs/main/image-8.jpg" alt="" width="100px" />
             </div>
-            <div class="songsDescription">
+            <div class="songsDescription ms-3">
               <p class="songsTitle">Titolo</p>
               <p class="songsArtist">Artista</p>
             </div>
           </div>
-          <div class="icons">
+          <div class="icons ps-2">
             <a href="#"><i class="bi bi-heart"></i></a>
           </div>
         </div>
@@ -385,13 +289,11 @@
         </div>
       </nav>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js"></script>
-    <script src="./homepage.js"></script>
+    <script src="./search.js"></script>
   </body>
 </html>
