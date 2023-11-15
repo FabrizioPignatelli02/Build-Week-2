@@ -52,7 +52,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./search.html"
+                <a href="#" id="searchLink" onclick="tryToSearch()"
                   ><svg
                     data-encore-id="icon"
                     role="img"
@@ -66,6 +66,15 @@
                   </svg>
                   Cerca
                 </a>
+                <div id="searchContainer">
+                  <input
+                    type="text"
+                    name="searchBar"
+                    id="search"
+                    style="display: none"
+                    placeholder="Cosa vuoi ascoltare?"
+                  />
+                </div>
               </li>
               <li class="nav-item">
                 <a href="#"
