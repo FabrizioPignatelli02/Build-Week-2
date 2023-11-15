@@ -22,6 +22,7 @@ fetch(URL, {
     console.log("artista", artistiObj);
 
     const listSongs = document.getElementById("listSongs");
+    listSongs.classList.add("justify-content-evenly");
 
     const imageArtist = document.createElement("img");
     imageArtist.classList.add("card-img-top");
