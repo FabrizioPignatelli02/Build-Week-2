@@ -60,6 +60,7 @@ fetch(URL, {
 
     const divLike = document.createElement("div");
     divLike.classList.add("d-flex");
+    divLike.id = "likeSection";
 
     const imgArtist = document.createElement("img");
     imgArtist.classList.add("rounded-circle");
@@ -75,8 +76,12 @@ fetch(URL, {
       brano = " brani";
     }
 
+    const nameArtistP = "Di " + artistiObj.name;
+
     const pLike = document.createElement("p");
-    pLike.innerText = "Hai messo Mi piace a " + randomNumber.toString() + brano;
+    pLike.classList.add("mx-3");
+    pLike.classList.add("my-1");
+    pLike.innerText = "Hai messo Mi piace a " + randomNumber.toString() + brano + "\n" + nameArtistP;
 
     divLike.appendChild(imgArtist);
     divLike.appendChild(pLike);
