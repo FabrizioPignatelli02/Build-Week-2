@@ -419,7 +419,6 @@ footer {
 
 footer {
   padding: 5px 20px;
-  position: relative;
   bottom: 0;
   height: 80px;
 }
@@ -432,7 +431,7 @@ footer {
   color: grey;
 }
 .musicPlayer i:hover {
-  color: var(--primary-color);
+  color: lime;
 }
 .musicPlayer .songsImg {
   width: 75px;
@@ -465,35 +464,35 @@ footer {
 .musicPlayer .progress-controller a {
   padding: 0 5px;
 }
-.musicPlayer .progress-controller .control-buttons {
+.musicPlayer .control-buttons {
   padding-top: 5px;
 }
-.musicPlayer .progress-controller .play-pause {
+.musicPlayer .play-pause {
   display: inline-block;
   padding: 8px 12px;
   background-color: var(--primary-color);
   color: #111;
   border-radius: 50%;
 }
-.musicPlayer .progress-controller .play-pause:hover {
+.musicPlayer .play-pause:hover {
   transform: scale(1.1);
   color: #111;
 }
-.musicPlayer .progress-controller .progressContainer {
+.musicPlayer .progressContainer {
   width: 100%;
   padding-top: 5px;
 }
-.musicPlayer .progress-controller .progressContainer .progressBar {
+.musicPlayer .progressContainer .progressBar {
   height: 4px;
   border-radius: 10px;
   width: 30%;
   background-color: rgba(204, 204, 204, 0.2666666667);
   margin: 0 10px;
 }
-.musicPlayer .progress-controller .progressContainer .progressBar:hover .progress {
+.musicPlayer .progressContainer .progressBar:hover .progress {
   background-color: lime;
 }
-.musicPlayer .progress-controller .progressContainer .progressBar:hover .progress::after {
+.musicPlayer .progressContainer .progressBar:hover .progress::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -503,10 +502,46 @@ footer {
   background-color: var(--primary-color);
   transform: translate(50%, 50%);
 }
-.musicPlayer .progress-controller .progressContainer .progress {
+.musicPlayer .progressContainer .progress {
   position: relative;
   height: 100%;
   width: 50%;
   border-radius: 10px;
   background-color: grey;
+}
+.musicPlayer .progressContainer .progress-bar:hover .progress {
+  background-color: var(--green-color);
+}
+.musicPlayer .progressContainer .progress::after {
+  content: "";
+  position: absolute;
+  --size: 1em;
+  width: var(--size);
+  height: var(--size);
+  right: 0;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.musicPlayer .otherFeatures {
+  display: flex;
+  flex-direction: row;
+}
+.musicPlayer .volumeBar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.musicPlayer .volumeBar .progressBar {
+  width: 6em;
+}
+.musicPlayer .volumeBar .progressBar .progress {
+  background-color: grey;
+  height: 6px;
+  margin: 0 8px;
+}
+.musicPlayer .volumeBar .progressBar .progress:hover {
+  color: lime;
+}
+.musicPlayer .volumeBar .progressBar:hover .progress::after {
+  --size: 0.8em;
 }/*# sourceMappingURL=style.css.map */
