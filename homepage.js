@@ -88,3 +88,15 @@ function tryToSearch() {
 
   input.style.display = input.style.display === "none" || input.style.display === "" ? "block" : "none";
 }
+
+// showalert  new Playlist
+
+function showAlert() {
+  const isUserRegistered = false;
+
+  if (!isUserRegistered) {
+    alert("Registrati prima di creare una playlist");
+  } else {
+    console.log("Playlist creata!");
+  }
+}
