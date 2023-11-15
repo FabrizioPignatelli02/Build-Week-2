@@ -515,6 +515,7 @@ footer {
     padding-top: 5px;
     .progressBar {
       height: 4px;
+      position: relative;
       border-radius: 10px;
       width: 30%;
       background-color: #ccc4;
@@ -522,23 +523,12 @@ footer {
       &:hover {
         .progress {
           background-color: lime;
-
-          &::after {
-            content: "";
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            right: 0;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            transform: translate(50%, 50%);
-          }
         }
       }
     }
 
     .progress {
-      position: relative;
+      
       height: 100%;
       width: 50%;
       border-radius: 10px;
@@ -547,16 +537,14 @@ footer {
     .progress-bar:hover .progress {
       background-color: var(--green-color);
     }
-    .progress::after {
-      content: "";
-      position: absolute;
-      --size: 1em;
-      width: var(--size);
-      height: var(--size);
-      right: 0;
+    .progressTime {      
+      position: absolute;     
+      width: 12px;
+      height: 12px;
+      right: 47.5%;
       border-radius: 50%;
       background-color: var(--primary-color);
-      // transform: translate(50%, calc(2px - 50%));
+      transform: translate(-50%, -70%);
     }
   }
   .otherFeatures {
