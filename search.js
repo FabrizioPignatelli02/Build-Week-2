@@ -31,24 +31,36 @@ const searchSongs = async () => {
       result.data.forEach((song) => {
         const listItem = document.createElement("li");
         listItem.className = "song";
+
+        const logoContainer = document.createElement("div");
+        logoContainer.className = "logo-container";
+
         const h2 = document.createElement("h2");
         const p1 = document.createElement("p");
         const p2 = document.createElement("p");
         const img = document.createElement("img");
-        const p3 = document.createElement("p");
+        // const p3 = document.createElement("p");
 
         h2.textContent = song.artist.name;
         p1.textContent = song.album.title;
         p2.textContent = song.title;
         img.src = song.artist.picture;
         img.alt = song.artist.name;
-        p3.textContent = song.album.tracklist;
+        // p3.textContent = song.album.tracklist;
 
+        const logo = document.createElement("img");
+        logo.src = "./assets/imgs/logo.svg";
+        logo.alt = "logo.svg";
+        logoContainer.appendChild(logo);
+
+        logoContainer.appendChild(img);
+
+        listItem.appendChild(logoContainer);
         listItem.appendChild(h2);
         listItem.appendChild(p1);
         listItem.appendChild(p2);
         listItem.appendChild(img);
-        listItem.appendChild(p3);
+        // listItem.appendChild(p3);
 
         songList.appendChild(listItem);
       });

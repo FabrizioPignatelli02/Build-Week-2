@@ -25,7 +25,7 @@ main {
   padding: 0;
 }
 
-#thisartist{
+#thisartist {
   margin: 50px;
 }
 
@@ -173,79 +173,71 @@ svg {
     background-color: unset;
     border: none;
     color: rgb(255, 255, 255);
-    #imageArtist{
+    #imageArtist {
       height: 400px;
       object-fit: cover;
     }
-    h2{
+    h2 {
       position: absolute;
       bottom: 0;
       margin-left: 20px;
       margin-bottom: 50px;
     }
-    p{
+    p {
       position: absolute;
       bottom: 0;
       margin-left: 20px;
     }
-    div{
+    div {
       position: absolute;
       bottom: 0;
       margin-left: 20px;
       margin-bottom: 96px;
-      svg{
+      svg {
         width: 100%;
-        fill: skyblue
+        fill: skyblue;
       }
-      p{
+      p {
         width: 120px;
       }
-
-
     }
-    #verifiedLabel{
-        margin-bottom: 96px;
-        margin-left: 45px;
+    #verifiedLabel {
+      margin-bottom: 96px;
+      margin-left: 45px;
     }
-
   }
 }
 
-#buttonSectionArtist{
+#buttonSectionArtist {
   margin-left: 20px;
   margin-top: 20px;
-  button{
+  button {
     margin-right: 20px;
-    svg{
+    svg {
       width: 100%;
       fill: black;
     }
-    li{
+    li {
       padding: 6px;
     }
   }
 }
 
-
-
-#likeSection{
+#likeSection {
   margin-top: 30px;
 }
-
-
-
 
 #cardFriends {
   font-size: 13px;
 }
 
-#songsTable{
+#songsTable {
   margin-top: 50px;
   table * {
-    th{
+    th {
       padding-inline: 20px;
     }
-    td{
+    td {
       padding-inline: 20px;
       padding-block: 10px;
     }
@@ -388,7 +380,56 @@ footer {
 }
 
 // search.html page 141/142
+#songList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+}
 
+.song {
+  position: relative;
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 10px;
+  text-align: center;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-container img {
+  position: absolute;
+  top: 95px;
+  left: 45px;
+  max-width: 10px;
+  max-height: 10px;
+  margin: 10px;
+  z-index: 1;
+  background-color: green;
+}
+.logo-container img + img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.song img {
+  max-width: 100%;
+  height: auto;
+}
+
+.song h2 {
+  margin: 5px 0;
+}
+
+.song p {
+  margin: 3px 0;
+}
 // footer songbar
 footer {
   padding: 5px 20px;
