@@ -102,6 +102,7 @@ function showAlert() {
 }
 
 // subscribe
+
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     showSubscribeCard();
@@ -109,13 +110,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function showSubscribeCard() {
-  var subscribeCard = document.getElementById("subscribeCard");
+  const subscribeCard = document.getElementById("subscribeCard");
   subscribeCard.classList.add("show");
 }
 
 function subscribe() {}
 
 function cancelSubscription() {
-  var subscribeCard = document.getElementById("subscribeCard");
+  const subscribeCard = document.getElementById("subscribeCard");
   subscribeCard.classList.remove("show");
 }
