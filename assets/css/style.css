@@ -364,12 +364,24 @@ footer {
 .song {
   position: relative;
   list-style: none;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 20px;
+  border: 1px transparent;
+  background-color: #282828;
+  border-radius: 10px;
   flex: 0 0 calc(33.333% - 20px);
   margin: 10px;
   text-align: center;
+  overflow: hidden;
+  height: 300px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.song .smallParag {
+  font-size: 16px;
+}
+
+.song:hover {
+  box-shadow: 0 0 40px lime;
 }
 
 .logo-container {
@@ -378,13 +390,13 @@ footer {
 
 .logo-container img {
   position: absolute;
-  top: 95px;
-  left: 45px;
+  top: -230px;
+  left: 33px;
   max-width: 10px;
   max-height: 10px;
   margin: 10px;
   z-index: 1;
-  background-color: green;
+  background-color: lime;
 }
 
 .logo-container img + img {
