@@ -22,6 +22,11 @@ main {
 
 #content {
   max-height: calc(100vh - 80px);
+  padding: 0;
+}
+
+#thisartist{
+  margin: 50px;
 }
 
 #playlistGroup {
@@ -160,8 +165,90 @@ svg {
   }
 }
 
+#thisArtist {
+  width: 100%;
+  margin-inline: 0;
+  margin-top: 0;
+  .card {
+    background-color: unset;
+    border: none;
+    color: rgb(255, 255, 255);
+    #imageArtist{
+      height: 400px;
+      object-fit: cover;
+    }
+    h2{
+      position: absolute;
+      bottom: 0;
+      margin-left: 20px;
+      margin-bottom: 50px;
+    }
+    p{
+      position: absolute;
+      bottom: 0;
+      margin-left: 20px;
+    }
+    div{
+      position: absolute;
+      bottom: 0;
+      margin-left: 20px;
+      margin-bottom: 96px;
+      svg{
+        width: 100%;
+        fill: skyblue
+      }
+      p{
+        width: 120px;
+      }
+
+
+    }
+    #verifiedLabel{
+        margin-bottom: 96px;
+        margin-left: 45px;
+    }
+
+  }
+}
+
+#buttonSectionArtist{
+  margin-left: 20px;
+  margin-top: 20px;
+  button{
+    margin-right: 20px;
+    svg{
+      width: 100%;
+      fill: black;
+    }
+    li{
+      padding: 6px;
+    }
+  }
+}
+
+#listSongs{
+  margin-left: 30px;
+}
+
+
+
+
+
 #cardFriends {
   font-size: 13px;
+}
+
+#songsTable{
+  margin-top: 50px;
+  table * {
+    th{
+      padding-inline: 20px;
+    }
+    td{
+      padding-inline: 20px;
+      padding-block: 10px;
+    }
+  }
 }
 
 footer {

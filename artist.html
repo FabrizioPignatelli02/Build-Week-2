@@ -116,17 +116,24 @@
         </nav>
 
         <main id="content" class="col-md-7 scrollable">
-          <a id="back" href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
-          <a id="next" href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
           <section id="thisArtist">
             <div class="containerArtist">
-              <div class="card d-flex flex-row mainArtist"></div>
+              <div class="card d-flex mainArtist">
+                <a id="back" href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
+                <a id="next" href="javascript:history.forward()" class="BB btn-N"
+                  ><i class="bi bi-chevron-right"></i
+                ></a>
+              </div>
             </div>
-            <div class="listContainer">
+            <div id="buttonSectionArtist"></div>
+
+            <div id="listSongs" class="listContainer d-flex">
               <div class="Icons"></div>
               <div class="list">
-                <div class="table-responsive">
+                <h2 class="mt-5 mx-3">Popolari</h2>
+                <div id="songsTable" class="table-responsive">
                   <table class="table-songs"></table>
+                  <a href="#">Visualizza altro</a>
                 </div>
               </div>
             </div>
