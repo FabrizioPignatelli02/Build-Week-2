@@ -3,7 +3,7 @@ function tryToSearch() {
 
   input.style.display = input.style.display === "none" || input.style.display === "" ? "block" : "none";
 }
-
+// a
 const apiKey = "a5517754abmsheebe0b22e59947fp18c555jsn03bc96d636c4";
 const apiHost = "deezerdevs-deezer.p.rapidapi.com";
 
@@ -25,7 +25,7 @@ const searchSongs = async () => {
     const result = await res.json();
 
     if (!songList) {
-      console.error("Error: songList element not found.");
+      console.error("Err");
     } else {
       songList.innerHTML = "";
       result.data.forEach((song) => {
@@ -46,5 +46,4 @@ const searchSongs = async () => {
   }
 };
 
-// Use the "input" event for real-time updates as the user types
 searchInput.addEventListener("input", searchSongs);
