@@ -48,7 +48,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="#"
+                <a href="#" onclick="tryToSearch()"
                   ><svg
                     data-encore-id="icon"
                     role="img"
@@ -60,9 +60,19 @@
                       d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
                     ></path>
                   </svg>
-                  Cerca</a
-                >
+                  Cerca
+                </a>
+                <div id="searchContainer">
+                  <input
+                    type="text"
+                    name="searchBar"
+                    id="search"
+                    style="display: none"
+                    placeholder="Cosa vuoi ascoltare?"
+                  />
+                </div>
               </li>
+
               <li class="nav-item">
                 <a href="#"
                   ><svg
@@ -125,10 +135,11 @@
             <div class="listContainer">
               <div class="Icons"></div>
               <div class="list">
-                <div class="table-responsive">
-                  <table class="table"></table>
-                </div>
+                <div class="table-responsive"></div>
               </div>
+            </div>
+            <div class="searchContainer">
+              <ul id="songList"></ul>
             </div>
           </section>
         </main>
@@ -284,73 +295,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const id = urlParams.get("id");
-      const container = document.querySelector(".card");
-      const table = document.querySelector(".table");
-      fetch("https://deezerdevs-deezer.p.rapidapi.com/playlist/" + id, {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key": "340f0fd2c3mshd061c26435823fbp17f559jsnc5395de2b6ca",
-          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-        }
-      })
-        .then((resp) => {
-          if (!resp.ok) {
-            throw new Error(`HTTP error! Status: ${resp.status}`);
-          }
-          return resp.json();
-        })
-        .then((albumObj) => {
-          console.log(albumObj);
-          const year = new Date(albumObj.creation_date).getFullYear();
-          const hours = Math.floor(albumObj.duration / 3600);
-          const minutes = Math.floor((albumObj.duration % 3600) / 60);
-
-          container.innerHTML = `
-        <img class="card-img" src="${albumObj.picture_medium}" alt="${albumObj.title}">
-                <div class="card-body">
-                  <span>album</span>
-                  <h4 class="card-title">${albumObj.title}</h4>
-                  <p class="card-text"><img class="imgSmall" src="${albumObj.picture_small}">${albumObj.creator.name} <span class="anno">${year}</span> ${albumObj.nb_tracks} brani,<span class="time">${hours} ora e ${minutes} minuti</span></p>
-                </div>
-              </div>            
-        `;
-          table.innerHTML = `
-              <thead>
-                <tr>
-                  <th scope="col"># TITOLO</th>
-                  <th scope="col">RIPRODUZIONI</th>
-                  <th scope="col"><i class="bi bi-clock"></i></th>
-                </tr>
-              </thead>
-              <tbody>
-                ${albumObj.tracks.data
-                  .map((element, index) => {
-                    const minutes = Math.floor(element.duration / 60);
-                    const seconds = element.duration % 60;
-                    const formattedDuration = `${minutes}:${String(seconds).padStart(2, "0")}`;
-
-                    return `
-                    <tr class="nameList">
-                      <td scope="row" class="name d-flex">
-                        <span class="index">${index + 1}</span>
-                        <div>
-                          <p>${element.title}</p>
-                          <span class="artist">${element.artist.name}</span>
-                        </div>
-                      </td>
-                      <td>${element.rank}</td>
-                      <td>${formattedDuration}</td>
-                    </tr>
-                  `;
-                  })
-                  .join("")}
-              </tbody>
-            `;
-        })
-        .catch((err) => console.error("Error:", err));
-    </script>
+    <script src="./search.js"></script>
   </body>
 </html>
