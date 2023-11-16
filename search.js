@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "GET",
         headers: {
           "X-RapidAPI-Key": apiKey,
-          "X-RapidAPI-Host": apiHost
-        }
+          "X-RapidAPI-Host": apiHost,
+        },
       });
       const result = await res.json();
 
@@ -53,16 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
           const textContainer = document.createElement("div");
           textContainer.className = "text-container";
 
-          const h2 = document.createElement("h2");
+          const a = document.createElement("a");
           const p1 = document.createElement("p");
           const p2 = document.createElement("p");
           p2.className = "smallParag";
 
-          h2.textContent = song.artist.name;
+          a.textContent = song.artist.name;
           p1.textContent = song.album.title;
           p2.textContent = song.title;
 
-          textContainer.appendChild(h2);
+          const id = song.artist.id;
+          console.log("id artista", id);
+
+          textContainer.appendChild(a);
           textContainer.appendChild(p1);
           textContainer.appendChild(p2);
 
@@ -80,6 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
           listItem.appendChild(textContainer);
 
           songList.appendChild(listItem);
+
+          listItem.addEventListener("click", goToArtist);
+
+          function goToArtist() {
+            a.href = `./artist.html?id=${id}`;
+          }
         });
       }
     } catch (err) {
