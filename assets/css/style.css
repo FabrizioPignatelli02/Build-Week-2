@@ -381,7 +381,7 @@ footer {
 }
 
 .song:hover {
-  box-shadow: 0 0 40px lime;
+  background-color: #403d3d;
 }
 
 .logo-container {
@@ -556,4 +556,17 @@ footer {
 
 .subscribe-card.show {
   transform: translateY(0);
+}
+
+.searchCard {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.searchCard .rotated-img {
+  width: 70px;
+  transform: rotate(30deg);
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }/*# sourceMappingURL=style.css.map */

@@ -39,7 +39,7 @@ const searchSongs = async () => {
         // imgContainer.style.height = "120px"
         // imgContainer.style.backgroundImage = song.artist.picture
         // console.log(song.artist);
-        imgContainer.style =`width:120px;height:120px; margin:auto; background-image: url(${song.artist.picture}); background-position:center; ;background-size:cover ;background-repeat:no-repeat`
+        imgContainer.style = `width:120px;height:120px; margin:auto; background-image: url(${song.artist.picture}); background-position:center; ;background-size:cover ;background-repeat:no-repeat`;
 
         const textContainer = document.createElement("div");
         textContainer.className = "text-container";
@@ -65,7 +65,7 @@ const searchSongs = async () => {
         logo.alt = "logo.svg";
 
         logoContainer.appendChild(logo);
-        
+
         imgContainer.appendChild(logoContainer);
         listItem.appendChild(imgContainer);
         listItem.appendChild(textContainer);
@@ -79,3 +79,22 @@ const searchSongs = async () => {
 };
 
 searchInput.addEventListener("input", searchSongs);
+
+// color random
+
+function getRandomColor() {
+  const letters = "0123456789ABCDEFG";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".searchCard");
+
+  cards.forEach(function (card) {
+    card.style.backgroundColor = getRandomColor();
+  });
+});

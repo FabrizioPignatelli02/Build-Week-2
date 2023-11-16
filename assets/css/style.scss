@@ -408,7 +408,7 @@ footer {
   }
 }
 .song:hover {
-  box-shadow: 0 0 40px lime;
+  background-color: #403d3d;
 }
 
 .logo-container {
@@ -528,7 +528,6 @@ footer {
     }
 
     .progress {
-      
       height: 100%;
       width: 50%;
       border-radius: 10px;
@@ -537,8 +536,8 @@ footer {
     .progress-bar:hover .progress {
       background-color: var(--green-color);
     }
-    .progressTime {      
-      position: absolute;     
+    .progressTime {
+      position: absolute;
       width: 12px;
       height: 12px;
       right: 47.5%;
@@ -609,4 +608,18 @@ footer {
 
 .subscribe-card.show {
   transform: translateY(0);
+}
+
+// pagina search.html
+.searchCard {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  .rotated-img {
+    width: 70px;
+    transform: rotate(30deg);
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
 }
