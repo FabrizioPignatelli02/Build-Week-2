@@ -27,3 +27,12 @@ playlist.forEach((pl) => {
     });
   }
 });
+
+const cards = document.querySelectorAll("#cardAlbum .card");
+cards.forEach(card =>{  
+  if (card.id.trim()!== "") {
+    card.addEventListener("click", function () {
+      window.location.href = `./artist.html?id=${card.id}`;
+    })
+  }
+})
