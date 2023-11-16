@@ -21,6 +21,16 @@ main {
   position: relative;
 }
 
+#next {
+  position: absolute;
+  margin-top: 10px;
+}
+
+#back {
+  position: absolute;
+  margin-top: 10px;
+}
+
 #content {
   max-height: calc(100vh - 80px);
   padding: 0;
