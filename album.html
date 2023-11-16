@@ -115,7 +115,7 @@
           </div>
         </nav>
 
-        <main id="content" class="col-md-7 scrollable">
+        <main id="content" class="col-md-8 scrollable">
           <a id="back" href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
           <a id="next" href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
           <section id="thisAlbum">
@@ -132,7 +132,7 @@
             </div>
           </section>
         </main>
-        <aside id="sidebar-right" class="d-none d-xl-block col-md-3 bg-black text-white">
+        <aside id="sidebar-right" class="d-none d-xl-block col-md-2 bg-black text-white">
           <div class="d-flex justify-content-between mt-2 mb-3">
             <h5>Attività amici</h5>
             <div>
@@ -294,8 +294,8 @@
         method: "GET",
         headers: {
           "X-RapidAPI-Key": "340f0fd2c3mshd061c26435823fbp17f559jsnc5395de2b6ca",
-          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-        }
+          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+        },
       })
         .then((resp) => {
           if (!resp.ok) {
