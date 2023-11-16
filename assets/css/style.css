@@ -323,7 +323,7 @@ footer {
 }
 #cardAlbum .card img {
   border-radius: 4px;
-  height: 140px;
+  height: 180px;
 }
 #cardAlbum .card .card-body {
   text-align: center;
@@ -342,7 +342,7 @@ footer {
 }
 #artistAlbum .card img {
   border-radius: 4px;
-  height: 140px;
+  height: 180px;
 }
 #artistAlbum .card .card-body {
   text-align: center;
