@@ -297,6 +297,10 @@ footer {
   margin-top: 20px;
   cursor: pointer;
 }
+.listContainer .cardList .card {
+  background-color: #2d2d2d;
+  color: white;
+}
 
 .btnContainer .btn {
   height: 40px;

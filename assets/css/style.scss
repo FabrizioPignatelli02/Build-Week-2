@@ -322,6 +322,10 @@ footer {
 .listContainer {
   margin-top: 20px;
   cursor: pointer;
+  .cardList .card {
+    background-color: #2d2d2d;
+    color: white;
+  }
 }
 .btnContainer {
   .btn {
