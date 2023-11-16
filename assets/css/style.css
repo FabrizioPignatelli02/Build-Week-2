@@ -562,6 +562,10 @@ footer {
   width: 200px;
   height: 200px;
   overflow: hidden;
+  color: white;
+}
+.searchCard .cardSearchTitle {
+  font-size: 30px;
 }
 .searchCard .rotated-img {
   width: 70px;
