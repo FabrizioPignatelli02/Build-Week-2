@@ -343,7 +343,7 @@ footer {
   padding-bottom: 0;
   margin: 10px;
   width: calc(20% - 20px);
-  height: 250px;
+  height: 300px;
   color: #fff;
   background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
   cursor: pointer;
@@ -367,7 +367,7 @@ footer {
   padding-bottom: 0;
   margin: 10px;
   width: calc(20% - 20px);
-  height: 250px;
+  height: 300px;
   color: #fff;
   background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
   cursor: pointer;
