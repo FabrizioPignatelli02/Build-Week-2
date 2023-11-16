@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const searchSongs = async () => {
     const query = searchInput.value.trim();
-    if (!query) {     
+    if (!query) {
       songList.innerHTML = "";
       return;
     }
@@ -56,19 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
           const textContainer = document.createElement("div");
           textContainer.className = "text-container";
 
-          const a = document.createElement("a");
+          const h2 = document.createElement("h2");
           const p1 = document.createElement("p");
           const p2 = document.createElement("p");
           p2.className = "smallParag";
 
-          a.textContent = song.artist.name;
+          h2.textContent = song.artist.name;
           p1.textContent = song.album.title;
           p2.textContent = song.title;
 
           const id = song.artist.id;
           console.log("id artista", id);
 
-          textContainer.appendChild(a);
+          textContainer.appendChild(h2);
           textContainer.appendChild(p1);
           textContainer.appendChild(p2);
 
@@ -85,7 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
           listItem.appendChild(imgContainer);
           listItem.appendChild(textContainer);
 
-          songList.appendChild(listItem);
+          const a = document.createElement("a");
+
+          a.appendChild(listItem);
+
+          songList.appendChild(a);
 
           listItem.addEventListener("click", goToArtist);
 
@@ -99,10 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  searchInput.addEventListener("input", function () {    
+  searchInput.addEventListener("input", function () {
     if (searchInput.value.trim() === "") {
       songList.innerHTML = "";
-    } else {      
+    } else {
       searchSongs();
     }
   });
@@ -110,9 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (searchInput.value.trim() === "") {
       songList.innerHTML = "";
     }
-  }); 
-
-
+  });
 
   function tryToSearch() {
     const input = document.getElementById("search");
