@@ -358,6 +358,9 @@ footer {
 #cardAlbum .card .card-body {
   text-align: center;
 }
+#cardAlbum .card:hover {
+  transform: scale(1.1);
+}
 
 #artistAlbum {
   padding: 10px 12.5px;
@@ -378,6 +381,9 @@ footer {
 }
 #artistAlbum .card .card-body {
   text-align: center;
+}
+#artistAlbum .card:hover {
+  transform: scale(1.1);
 }
 
 .scrollable {
