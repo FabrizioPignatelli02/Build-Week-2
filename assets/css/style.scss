@@ -367,8 +367,10 @@ footer {
     padding-bottom: 0;
     margin: 10px;
     width: calc(100% / 5 - 20px);
+    height: 250px;
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
+
     img {
       border-radius: 4px;
       height: 180px;
@@ -388,6 +390,7 @@ footer {
     padding-bottom: 0;
     margin: 10px;
     width: calc(100% / 5 - 20px);
+    height: 250px;
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
     img {
