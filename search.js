@@ -3,7 +3,7 @@ function tryToSearch() {
 
   input.style.display = input.style.display === "none" || input.style.display === "" ? "block" : "none";
 }
-// a
+//
 const apiKey = "a5517754abmsheebe0b22e59947fp18c555jsn03bc96d636c4";
 const apiHost = "deezerdevs-deezer.p.rapidapi.com";
 
@@ -96,5 +96,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cards.forEach(function (card) {
     card.style.backgroundColor = getRandomColor();
+  });
+});
+
+// display-none search.html
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".searchCard");
+
+  var search = document.getElementById("search");
+
+  search.addEventListener("input", function () {
+    const searchTerm = search.value.toLowerCase();
+
+    cards.forEach(function (card) {
+      const cardTitle = card.querySelector(".cardSearchTitle").textContent.toLowerCase();
+
+      if (cardTitle.includes(searchTerm)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
   });
 });
