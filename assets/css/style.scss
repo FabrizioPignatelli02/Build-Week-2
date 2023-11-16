@@ -320,6 +320,7 @@ footer {
 
 .listContainer {
   margin-top: 20px;
+  cursor: pointer;
 }
 .btnContainer {
   .btn {
@@ -370,12 +371,14 @@ footer {
     height: 250px;
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
-
+    cursor: pointer;
     img {
       border-radius: 4px;
       height: 180px;
     }
-
+    h5 {
+      font-size: 15px;
+    }
     .card-body {
       text-align: center;
     }
@@ -393,6 +396,7 @@ footer {
     height: 250px;
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
+    cursor: pointer;
     img {
       border-radius: 4px;
       height: 180px;

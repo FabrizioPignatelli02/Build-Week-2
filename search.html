@@ -114,22 +114,18 @@
           </div>
         </nav>
 
-        <main id="content" class="col-md-8 scrollable">
+        <main id="content" class="col-12 col-sm-12 col-md-8 scrollable ms-auto">
           <div class="d-flex align-items-center pb-5 m-4 me-3">
             <a id="back" href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
             <a id="next" href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
             <div id="searchContainer" class="ms-5">
-              <input
-                type="text"
-                class="mx-5 mt-2"
-                name="searchBar"
-                id="search"
-                placeholder=" &#xF52A; Cosa vuoi ascoltare?"
-              />
+              <input type="text" class="mx-5 mt-2" name="searchBar" id="search" placeholder="Cosa vuoi ascoltare?" />
             </div>
           </div>
           <div class="cardContainer m-5">
-            <div class="row row-cols-3 flex-wrap">
+            <div
+              class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 flex-wrap justify-content-center"
+            >
               <div class="searchCard card m-2">
                 <div class="card-body">
                   <h5 class="cardSearchTitle">Pop</h5>
@@ -211,7 +207,7 @@
             </div>
           </section>
         </main>
-        <aside id="sidebar-right" class="d-none d-xl-block col-md-2 bg-black text-white">
+        <aside id="sidebar-right" class="d-none d-xl-block d-md-none d-sm-none col-md-2 bg-black text-white">
           <div class="d-flex justify-content-between mt-2 mb-3">
             <h5>Attività amici</h5>
             <div>
@@ -267,7 +263,7 @@
       </div>
     </div>
 
-    <footer id="playbar" class="bg-dark text-white">
+    <footer id="playbar" class="bg-dark text-white d-none d-md-block">
       <div class="musicPlayer d-flex justify-content-between align-items-center">
         <div class="songsBar d-flex flex-row justify-content-start align-items-center">
           <div class="songsInfo d-flex align-items-center">
@@ -311,7 +307,7 @@
         </div>
       </div>
     </footer>
-    <div class="bg-black sticky-bottom d-block d-lg-none p-0">
+    <div class="bg-black sticky-bottom d-block d-md-none p-1">
       <nav class="navbar">
         <div class="container-fluid d-flex flex-nowrap">
           <div id="icon-navbar" class="d-flex">
