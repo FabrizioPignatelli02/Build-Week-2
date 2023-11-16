@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const searchSongs = async () => {
     const query = searchInput.value.trim();
-    if (!query) return;
+    if (!query) {     
+      songList.innerHTML = "";
+      return;
+    }
 
     try {
       const res = await fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`, {
@@ -96,7 +99,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  searchInput.addEventListener("input", searchSongs);
+  searchInput.addEventListener("input", function () {    
+    if (searchInput.value.trim() === "") {
+      songList.innerHTML = "";
+    } else {      
+      searchSongs();
+    }
+  });
+  searchInput.addEventListener("blur", function () {
+    if (searchInput.value.trim() === "") {
+      songList.innerHTML = "";
+    }
+  }); 
+
+
 
   function tryToSearch() {
     const input = document.getElementById("search");
