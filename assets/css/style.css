@@ -226,6 +226,9 @@ svg {
 #cardFriends {
   font-size: 13px;
 }
+#cardFriends h5 {
+  font-size: 15px;
+}
 
 #songsTable {
   margin-top: 50px;

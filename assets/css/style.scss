@@ -20,12 +20,12 @@ main {
   position: relative;
 }
 
-#next{
+#next {
   position: absolute;
   margin-top: 10px;
 }
 
-#back{
+#back {
   position: absolute;
   margin-top: 10px;
 }
@@ -239,6 +239,9 @@ svg {
 
 #cardFriends {
   font-size: 13px;
+  h5 {
+    font-size: 15px;
+  }
 }
 
 #songsTable {
