@@ -575,6 +575,10 @@ footer {
   overflow: hidden;
   color: white;
 }
+.searchCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #7b7b7b;
+}
 .searchCard .cardSearchTitle {
   font-size: 30px;
 }

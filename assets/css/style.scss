@@ -632,6 +632,10 @@ footer {
   height: 200px;
   overflow: hidden;
   color: white;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #7b7b7b;
+  }
 
   .cardSearchTitle {
     font-size: 30px;
