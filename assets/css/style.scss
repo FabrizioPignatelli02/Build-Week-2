@@ -322,6 +322,10 @@ footer {
 .listContainer {
   margin-top: 20px;
   cursor: pointer;
+  .cardList .card {
+    background-color: #2d2d2d;
+    color: white;
+  }
 }
 .btnContainer {
   .btn {
@@ -373,6 +377,7 @@ footer {
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
     cursor: pointer;
+
     img {
       border-radius: 4px;
       height: 180px;
@@ -382,6 +387,9 @@ footer {
     }
     .card-body {
       text-align: center;
+    }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -405,6 +413,9 @@ footer {
 
     .card-body {
       text-align: center;
+    }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
