@@ -158,13 +158,16 @@ fetch(URLSongs, {
         const audio = document.createElement("audio");
         audio.controls = true;
 
-        console.log("controlli", audio.controls);
+        console.log("controlli", audio);
 
         const sourceAudio = document.createElement("source");
-        sourceAudio.src = song.preview;
-        sourceAudio.type = "audio/mpeg";
+        sourceAudio.src = "";
+        sourceAudio.type = "audio/mp3";
 
         audio.appendChild(sourceAudio);
+        sourceAudio.src = song.preview;
+
+        console.log("audio", audio);
 
         const playerImageSong = document.getElementById("playerImageSong");
         playerImageSong.src = song.album.cover_small;
@@ -178,16 +181,18 @@ fetch(URLSongs, {
         const playButton = document.getElementsByClassName("bi-play-circle")[0].parentElement;
         const pauseButton = document.getElementsByClassName("bi-pause-circle")[0].parentElement;
 
-        playButton.addEventListener("click", play);
-        pauseButton.addEventListener("click", pause);
+        pauseButton.addEventListener("click", pauseed);
 
-        function play() {
+        function played() {
           audio.play();
           playButton.classList.add("d-none");
           pauseButton.classList.remove("d-none");
           pauseButton.classList.add("d-block");
         }
-        function pause() {
+
+        playButton.addEventListener("click", played);
+
+        function pauseed() {
           audio.pause();
           pauseButton.classList.add("d-none");
           playButton.classList.remove("d-none");
