@@ -102,15 +102,6 @@ volumeRange.addEventListener("input", function () {
   currentAudio.volume = volumeRange.value / 100;
 });
 
-const player = document.getElementById("player");
-player.addEventListener("timeupdate", function () {
-  let currentTime = player.currentTime;
-  let songDuaration = player.duration;
-  $(".hp_range")
-    .stop(true, true)
-    .animate({ width: ((currentTime + 0.25) / duration) * 100 + "%" }, 250, "linear");
-});
-
 fetch(URLSongs, {
   method: "GET",
   headers: {
