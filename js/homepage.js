@@ -9,8 +9,8 @@ const fetchData = async (index) => {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": apiKey,
-        "X-RapidAPI-Host": apiHost
-      }
+        "X-RapidAPI-Host": apiHost,
+      },
     });
     const data = await response.json();
     return data.data[0];
@@ -40,8 +40,8 @@ artistId.forEach((id) => {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": "e32af77647mshc0813668c60e362p1797cajsn98f9343fa805",
-      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-    }
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    },
   })
     .then((resp) => {
       return resp.json();
@@ -50,7 +50,9 @@ artistId.forEach((id) => {
       const cardDiv = document.createElement("div");
       cardDiv.classList.add("card");
       cardDiv.classList.add("bg-dark");
-
+      cardDiv.addEventListener("click", function () {
+          window.location.href = `./artist.html?id=${id}`;
+        });
       const artistImg = document.createElement("img");
       artistImg.classList.add("card-img-top");
       const artistUrlImage = artistObj.picture;
