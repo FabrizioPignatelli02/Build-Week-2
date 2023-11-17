@@ -122,6 +122,38 @@ fetch(URLSongs, {
 
       trSong.addEventListener("click", playSong);
 
+      // tdButton.appendChild(buttonSongPlay);
+
+      const tdSong4 = document.createElement("td");
+      tdSong4.innerText = index + 1;
+
+      const tdSong1 = document.createElement("td");
+      const imageSong = document.createElement("img");
+      imageSong.src = song.album.cover_small;
+      tdSong1.appendChild(imageSong);
+
+      const tdSong2 = document.createElement("td");
+      tdSong2.innerText = song.title;
+
+      const tdSong3 = document.createElement("td");
+      let minutes = Math.floor(song.duration / 60);
+      let seconds = song.duration % 60;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      const duration = minutes + ":" + seconds;
+
+      console.log("duration", duration);
+
+      tdSong3.innerText = duration;
+
+      // trSong.appendChild(tdButton);
+      trSong.appendChild(tdSong4);
+      trSong.appendChild(tdSong1);
+      trSong.appendChild(tdSong2);
+      trSong.appendChild(tdSong3);
+
+      tbody.appendChild(trSong);
+
       function playSong() {
         const audio = document.createElement("audio");
         audio.controls = true;
@@ -161,39 +193,10 @@ fetch(URLSongs, {
           playButton.classList.remove("d-none");
           playButton.classList.add("d-block");
         }
+
+        const songTimeAll = document.getElementById("songTimeAll");
+        songTimeAll.innerText = duration;
       }
-
-      // tdButton.appendChild(buttonSongPlay);
-
-      const tdSong4 = document.createElement("td");
-      tdSong4.innerText = index + 1;
-
-      const tdSong1 = document.createElement("td");
-      const imageSong = document.createElement("img");
-      imageSong.src = song.album.cover_small;
-      tdSong1.appendChild(imageSong);
-
-      const tdSong2 = document.createElement("td");
-      tdSong2.innerText = song.title;
-
-      const tdSong3 = document.createElement("td");
-      let minutes = Math.floor(song.duration / 60);
-      let seconds = song.duration % 60;
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-      const duration = minutes + ":" + seconds;
-
-      console.log("duration", duration);
-
-      tdSong3.innerText = duration;
-
-      // trSong.appendChild(tdButton);
-      trSong.appendChild(tdSong4);
-      trSong.appendChild(tdSong1);
-      trSong.appendChild(tdSong2);
-      trSong.appendChild(tdSong3);
-
-      tbody.appendChild(trSong);
     });
 
     tableSongs.appendChild(tbody);
