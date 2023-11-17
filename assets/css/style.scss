@@ -77,9 +77,11 @@ svg {
   fill: white;
 }
 
-.plus {
-  font-size: 25px;
-  background-color: grey;
+.plus-icon {
+  .plus {
+    font-size: 25px;
+    background-color: grey;
+  }
 }
 
 .heart {
