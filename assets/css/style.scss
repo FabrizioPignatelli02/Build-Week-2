@@ -85,6 +85,21 @@ svg {
   }
 }
 
+#icon-navbar svg {
+  width: 25px;
+}
+
+.nav-item svg {
+  padding-bottom: 5px;
+  vertical-align: middle;
+}
+
+.plus {
+  font-size: 25px;
+
+  background-color: #555;
+}
+
 .heart {
   background: linear-gradient(
     138deg,
