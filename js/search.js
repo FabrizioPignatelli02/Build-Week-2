@@ -122,6 +122,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+function clearSearch() {
+  document.getElementById("search").value = "";
+}
+
 // color random
 
 function getRandomColor() {

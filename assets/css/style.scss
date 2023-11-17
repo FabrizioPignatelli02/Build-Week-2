@@ -506,6 +506,29 @@ footer {
 .song p {
   margin: 3px 0;
 }
+
+#searchContainer {
+  position: relative;
+
+  .search-bar {
+    padding-right: 30px;
+    width: calc(100% - 30px);
+  }
+
+  #clearButton {
+    position: absolute;
+    right: 17%;
+    top: 58%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    span {
+      opacity: 1;
+      color: #555;
+    }
+  }
+}
+
 // footer songbar
 footer {
   padding: 5px 20px;
@@ -674,8 +697,6 @@ footer {
 }
 
 // pagina search.html
-
-// search-icon
 
 .searchCard {
   width: 200px;
