@@ -95,7 +95,7 @@ fetch(URL, {
 
 const URLSongs = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id + "/top?limit=5";
 
-let audioContainer = [];
+let currentAudio;
 
 fetch(URLSongs, {
   method: "GET",
@@ -122,15 +122,7 @@ fetch(URLSongs, {
       const trSong = document.createElement("tr");
       trSong.classList.add("nameList");
 
-      trSong.addEventListener("click", isPlayed);
-      function isPlayed() {
-        if (!audioContainer) {
-          playSong();
-        } else {
-          audioContainer = [];
-          playSong();
-        }
-      }
+      trSong.addEventListener("click", playSong);
 
       // tdButton.appendChild(buttonSongPlay);
 
@@ -165,35 +157,42 @@ fetch(URLSongs, {
       tbody.appendChild(trSong);
 
       function playSong() {
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio.remove();
+        }
         const audio = document.createElement("audio");
         audio.controls = true;
 
         const sourceAudio = document.createElement("source");
+        sourceAudio.src = "";
         sourceAudio.type = "audio/mpeg";
 
         audio.appendChild(sourceAudio);
-
-        audioContainer.push(audio);
+        sourceAudio.src = song.preview;
+        currentAudio = audio;
 
         const playButtonPreview = document.getElementsByClassName("bi-play-circle")[0].parentElement;
         const pauseButtonPreview = document.getElementsByClassName("bi-pause-circle")[0].parentElement;
 
-        playButtonPreview.addEventListener("click", function () {
+        playButtonPreview.removeEventListener("click", play);
+        pauseButtonPreview.removeEventListener("click", pause);
+
+        playButtonPreview.addEventListener("click", play);
+        pauseButtonPreview.addEventListener("click", pause);
+
+        function play() {
           audio.play();
           playButtonPreview.classList.add("d-none");
           pauseButtonPreview.classList.remove("d-none");
           pauseButtonPreview.classList.add("d-block");
-        });
-        pauseButtonPreview.addEventListener("click", function () {
-          audio.pause();
-          pauseButtonPreview.classList.add("d-none");
-          playButtonPreview.classList.remove("d-none");
-          playButtonPreview.classList.add("d-block");
-        });
-        sourceAudio.src = song.preview;
+        }
 
-        console.log("audio", audio);
-        console.log("cover small", song.album.cover_small);
+        function pause() {
+          audio.pause();
+          playButtonPreview.classList.remove("d-none");
+          pauseButtonPreview.classList.add("d-none");
+        }
 
         const playerImageSong = document.getElementById("playerImageSong");
 
@@ -212,6 +211,8 @@ fetch(URLSongs, {
         playButtonPreview.classList.add("d-none");
         pauseButtonPreview.classList.remove("d-none");
         pauseButtonPreview.classList.add("d-block");
+
+        document.body.appendChild(audio);
       }
     });
 
