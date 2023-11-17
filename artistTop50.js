@@ -96,7 +96,7 @@ fetch(URL, {
     listSongs.appendChild(songsLike);
   });
 
-const URLSongs = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id + "/top?limit=5";
+const URLSongs = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id + "/top?limit=50";
 
 let currentAudio;
 const volumeRange = document.querySelector(".volume-range");
