@@ -125,16 +125,26 @@ fetch(URLSongs, {
       buttonSongPlay.addEventListener("click", playSong);
 
       function playSong() {
-        const videoSource = document.createElement("video");
-        videoSource.autoplay = "true";
+        // const videoSource = document.createElement("video");
+        // videoSource.autoplay = "true";
+        // const sourceSong = document.createElement("source");
+        // sourceSong.src = song.preview;
+        // sourceSong.type = "audio/mpeg";
+        // videoSource.appendChild(sourceSong);
+        // console.log("videosource", videoSource);
 
-        const sourceSong = document.createElement("source");
-        sourceSong.src = song.preview;
-        sourceSong.type = "audio/mpeg";
+        const audio = document.createElement("audio");
+        audio.controls = "true";
+        audio.src = song.preview;
 
-        videoSource.appendChild(sourceSong);
+        const playerImageSong = document.getElementById("playerImageSong");
+        playerImageSong.src = song.album.cover_small;
 
-        console.log("videosource", videoSource);
+        const songsTitle = document.getElementsByClassName("songsTitle")[0];
+        songsTitle.innerText = song.title;
+
+        const songsArtist = document.getElementsByClassName("songsArtist")[0];
+        songsArtist.innerText = song.artist.name;
       }
 
       tdButton.appendChild(buttonSongPlay);

@@ -366,6 +366,10 @@ footer {
   transform: scale(1.1);
 }
 
+#listSongs {
+  cursor: default;
+}
+
 #artistAlbum {
   padding: 10px 12.5px;
 }
