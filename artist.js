@@ -96,6 +96,11 @@ fetch(URL, {
 const URLSongs = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id + "/top?limit=5";
 
 let currentAudio;
+const volumeRange = document.querySelector(".volume-range");
+
+volumeRange.addEventListener("input", function () {
+  currentAudio.volume = volumeRange.value / 100;
+});
 
 fetch(URLSongs, {
   method: "GET",
@@ -171,6 +176,8 @@ fetch(URLSongs, {
         audio.appendChild(sourceAudio);
         sourceAudio.src = song.preview;
         currentAudio = audio;
+
+        currentAudio.volume = volumeRange.value / 100;
 
         const playButtonPreview = document.getElementsByClassName("bi-play-circle")[0].parentElement;
         const pauseButtonPreview = document.getElementsByClassName("bi-pause-circle")[0].parentElement;
