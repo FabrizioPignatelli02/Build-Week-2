@@ -12,8 +12,8 @@ fetch(URL, {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "340f0fd2c3mshd061c26435823fbp17f559jsnc5395de2b6ca",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-  },
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+  }
 })
   .then((resp) => {
     return resp.json();
@@ -101,8 +101,8 @@ fetch(URLSongs, {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "340f0fd2c3mshd061c26435823fbp17f559jsnc5395de2b6ca",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-  },
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+  }
 })
   .then((resp) => {
     return resp.json();
@@ -229,7 +229,7 @@ playButton.classList.add("btn");
 playButton.classList.add("btn-success");
 playButton.classList.add("rounded-circle");
 
-playButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+playButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="18" fill="currentColor" class="bi bi-play-fill" viewBox="1 2 12 15">
 <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
 </svg>`;
 
