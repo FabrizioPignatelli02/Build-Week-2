@@ -104,9 +104,14 @@ function showAlert() {
 // subscribe
 
 document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    showSubscribeCard();
-  }, 1000);
+  const eventOnce = sessionStorage.getItem("eventShown");
+
+  if (!eventOnce) {
+    setTimeout(function () {
+      showSubscribeCard();
+      sessionStorage.setItem("eventShown", "true");
+    }, 1000);
+  }
 });
 
 function showSubscribeCard() {
