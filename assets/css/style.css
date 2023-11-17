@@ -77,11 +77,6 @@ svg {
   fill: white;
 }
 
-.plus {
-  font-size: 25px;
-  background-color: grey;
-}
-
 .heart {
   background: linear-gradient(138deg, rgb(80, 25, 163) 0%, rgb(58, 27, 88) 11%, rgb(138, 110, 176) 97%, rgb(138, 73, 137) 100%, rgb(163, 25, 160) 100%);
   padding: 4.4px;

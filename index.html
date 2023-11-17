@@ -186,7 +186,7 @@
               </div>
             </div>
           </section>
-          <section id="albumLike">
+          <section id="albumLike" class="d-none d-lg-block">
             <div class="d-flex justify-content-between">
               <h4 class="text-white">Altro di ciò che ti piace</h4>
               <a href="#">Visualizza tutto</a>
@@ -298,14 +298,14 @@
         <div class="songsBar d-flex flex-row justify-content-start align-items-center">
           <div class="songsInfo d-flex align-items-center">
             <div class="songsImg">
-              <img src="./assets/imgs/main/image-8.jpg" alt="" />
+              <img id="playerImageSong" src="./assets/imgs/main/image-8.jpg" alt="" width="100px" />
             </div>
-            <div class="songsDescription">
+            <div class="songsDescription ms-3">
               <p class="songsTitle">Titolo</p>
               <p class="songsArtist">Artista</p>
             </div>
           </div>
-          <div class="icons">
+          <div class="icons ps-2">
             <a href="#"><i class="bi bi-heart"></i></a>
           </div>
         </div>
@@ -313,26 +313,36 @@
           <div class="control-buttons d-flex align-items-center">
             <a href="#"><i class="bi bi-shuffle"></i></a>
             <a href="#"><i class="bi bi-skip-start-circle"></i></a>
-            <a href="#"><i class="play-pause bi bi-play-circle"></i></a>
+            <a id="playButton" href="#"><i class="play-pause bi bi-play-circle"></i></a>
+            <a id="pauseButton" class="d-none" href="#"><i class="play-pause bi bi-pause-circle"></i></a>
             <a href="#"><i class="bi bi-skip-end-circle"></i></a>
             <a href="#"><i class="bi bi-repeat"></i></a>
           </div>
           <div class="progressContainer d-flex align-items-center justify-content-center">
-            <span>0:00</span>
+            <span id="currentTime"></span>
             <div class="progressBar">
-              <div class="progress"></div>
-              <div class="progressTime"></div>
+              <div class="progress w-100 bg-dark">
+                <input id="timeRange" style="width: 100%; accent-color: lime"" type="range" min="0" max="100" />
+              </div>
             </div>
-            <span>0:30</span>
+            <span id="songTimeAll"></span>
           </div>
         </div>
-        <div class="otherFeatures">
+        <div class="otherFeatures d-flex flex-row justify-content-between">
           <a href="#"><i class="bi bi-menu-button-wide"></i></a>
           <div class="volumeBar d-flex align-items-center ps-3 pe-3">
             <a href="#"><i class="bi bi-volume-up"></i></a>
             <div class="progressBar">
-              <!-- <input type="range" class="volumeControl" min="0" max="100" value="50" step="1" /> -->
-              <div class="progress"></div>
+              <div class="progress bg-dark">
+                <input
+                  style="width: 100%; accent-color: lime"
+                  id="player"
+                  type="range"
+                  min="0"
+                  max="100"
+                  class="volume-range"
+                />
+              </div>
             </div>
             <a href="#"><i class="bi bi-arrows-angle-expand"></i></a>
           </div>
