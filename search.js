@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "GET",
         headers: {
           "X-RapidAPI-Key": apiKey,
-          "X-RapidAPI-Host": apiHost,
-        },
+          "X-RapidAPI-Host": apiHost
+        }
       });
       const result = await res.json();
 
