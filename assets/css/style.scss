@@ -378,7 +378,7 @@ footer {
     padding: 20px;
     padding-bottom: 0;
     margin: 10px;
-    width: calc(100% / 5 - 20px);
+    width: calc(100% / 4 - 20px);
     height: 300px;
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
@@ -400,8 +400,8 @@ footer {
   }
 }
 
-#listSongs{
-  cursor:default;
+#listSongs {
+  cursor: default;
 }
 
 #artistAlbum {
@@ -411,7 +411,7 @@ footer {
     padding: 20px;
     padding-bottom: 0;
     margin: 10px;
-    width: calc(100% / 5 - 20px);
+    width: calc(100% / 4 - 20px);
     height: 300px;
     color: #fff;
     background: linear-gradient(8deg, rgba(32, 29, 29, 1) 63%, rgba(61, 58, 58, 1) 100%);
@@ -690,4 +690,10 @@ footer {
     bottom: 5px;
     right: 5px;
   }
+}
+@media screen and (min-width: 991px) {
+  .likes {
+    margin: auto;
+}
+
 }
