@@ -121,11 +121,9 @@
           </div>
         </nav>
 
-        <main id="content" class="col-md-12 col-lg-12 col-xl-8 scrollable scrollable">
-          <div class="d-flex align-items-center m-4">
-            <a href="javascript:history.back()" class="BB btn-B ms-4 me-2"><i class="bi bi-chevron-left"></i></a>
-            <a href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>
-          </div>
+        <main id="content" class="col-md-12 col-lg-12 col-xl-8 scrollable scrollable">          
+            <a href="javascript:history.back()" class="BB btn-B"><i class="bi bi-chevron-left"></i></a>
+            <a href="javascript:history.forward()" class="BB btn-N"><i class="bi bi-chevron-right"></i></a>          
           <section id="newAlbum">
             <div class="containerAlbum">
               <div class="card customGradient">
@@ -147,43 +145,62 @@
             <div class="listContainer">
               <h3 class="mt-5 mb-3">Playlist</h3>
               <div class="cardList mx-4">
-                <div class="row row-cols-3 flex-wrap">
+                <div class="row">
+
+                  <div class="col-12 col-sm-6 col-md-4">
                   <div class="card mb-3 me-1 playlist12">
                     <div class="card-body">
                       <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="..." />
                       <p class="card-text">Gym songs</p>
                     </div>
                   </div>
+                </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
                   <div class="card mb-3 me-1 playlist23">
                     <div class="card-body">
                       <img src="./assets/imgs/main/image-2.jpg" class="img-fluid rounded-start" alt="..." />
                       <p class="card-text">Relax Beat</p>
                     </div>
                   </div>
+                </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
                   <div class="card mb-3 me-1 playlist31">
                     <div class="card-body">
                       <img src="./assets/imgs/main/image-3.jpg" class="img-fluid rounded-start" alt="..." />
                       <p class="card-text">Concentrazione Massima</p>
                     </div>
                   </div>
+                </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
                   <div class="card mb-3 me-1 playlist45">
                     <div class="card-body">
                       <img src="./assets/imgs/main/image-4.jpg" class="img-fluid rounded-start" alt="..." />
                       <p class="card-text">By the piano</p>
                     </div>
                   </div>
+                </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
                   <div class="card mb-3 me-1 playlist52">
                     <div class="card-body">
                       <img src="./assets/imgs/main/image-5.jpg" class="img-fluid rounded-start" alt="..." />
                       <p class="card-text">Verso il cielo</p>
                     </div>
                   </div>
+                </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
                   <div class="card mb-3 me-1 playlist60">
                     <div class="card-body">
                       <img src="./assets/imgs/main/image-6.jpg" class="img-fluid rounded-start" alt="..." />
                       <p class="card-text">Summer Vibes</p>
                     </div>
                   </div>
+                </div>
+
                 </div>
               </div>
             </div>
@@ -193,7 +210,10 @@
               <h4 class="text-white">Altro di ciò che ti piace</h4>
               <a href="#">Visualizza tutto</a>
             </div>
-            <div id="cardAlbum" class="row row-cols-5">
+            <div id="cardAlbum" class="row">
+
+
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card bg-dark" id="10844726">
                 <img src="./assets/imgs/main/image-10.jpg" class="card-img-top" alt="album-1" />
                 <div class="card-body">
@@ -201,6 +221,8 @@
                   <p class="card-text text-secondary">Damn!</p>
                 </div>
               </div>
+            </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card bg-dark" id="416239">
                 <img src="./assets/imgs/main/image-11.jpg" class="card-img-top" alt="album-2" />
                 <div class="card-body">
@@ -208,6 +230,8 @@
                   <p class="card-text text-secondary">see more</p>
                 </div>
               </div>
+            </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card bg-dark" id="14899847">
                 <img src="./assets/imgs/main/image-12.jpg" class="card-img-top" alt="album-3" />
                 <div class="card-body">
@@ -215,6 +239,8 @@
                   <p class="card-text text-secondary">New songs!</p>
                 </div>
               </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card bg-dark" id="6861841">
                 <img src="./assets/imgs/main/image-13.jpg" class="card-img-top" alt="album-4" />
                 <div class="card-body">
@@ -222,6 +248,9 @@
                   <p class="card-text text-secondary">Nice&Clean</p>
                 </div>
               </div>
+            </div>
+
+              
               <!-- <div class="card bg-dark" id="119">
                 <img src="./assets/imgs/main/image-14.jpg" class="card-img-top" alt="album-5" />
                 <div class="card-body">
@@ -236,7 +265,7 @@
               <h4 class="text-white">Artisti consigliati</h4>
               <a href="#">Visualizza tutto</a>
             </div>
-            <div id="artistAlbum" class="row row-cols-5"></div>
+            <div id="artistAlbum" class="row"></div>
           </section>
         </main>
         <aside id="sidebar-right" class="d-none d-xl-block col-md-2 bg-black text-white">

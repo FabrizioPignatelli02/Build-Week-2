@@ -47,12 +47,15 @@ artistId.forEach((id) => {
       return resp.json();
     })
     .then((artistObj) => {
+      const divParent = document.createElement("div");
+      divParent.className = "col-12 col-sm-6 col-md-6 col-lg-3";
+
       const cardDiv = document.createElement("div");
       cardDiv.classList.add("card");
       cardDiv.classList.add("bg-dark");
       cardDiv.addEventListener("click", function () {
-          window.location.href = `./artist.html?id=${id}`;
-        });
+        window.location.href = `./artist.html?id=${id}`;
+      });
       const artistImg = document.createElement("img");
       artistImg.classList.add("card-img-top");
       const artistUrlImage = artistObj.picture;
@@ -78,8 +81,8 @@ artistId.forEach((id) => {
 
       cardDiv.appendChild(artistImg);
       cardDiv.appendChild(cardBodyDiv);
-
-      artistAlbum.appendChild(cardDiv);
+      divParent.appendChild(cardDiv);
+      artistAlbum.appendChild(divParent);
     });
 });
 

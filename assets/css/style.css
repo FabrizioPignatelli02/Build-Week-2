@@ -34,6 +34,7 @@ main {
 #content {
   max-height: calc(100vh - 80px);
   padding: 0;
+  position: relative;
 }
 
 #thisartist {
@@ -264,12 +265,14 @@ footer {
 }
 
 .BB {
+  position: absolute;
+  top: 15px;
   border-radius: 9999px;
   color: grey;
   width: 25px;
   height: 25px;
   background-color: black;
-  padding: 0.5px 3.5px;
+  padding: 0.5px 4px;
 }
 .BB.btn-B {
   left: 15px;
@@ -332,7 +335,6 @@ footer {
 }
 
 .cardList .card {
-  width: calc(33.3333333333% - 10px);
   padding: 0;
   margin: 0;
   border: 0;
@@ -362,7 +364,6 @@ footer {
   padding: 20px;
   padding-bottom: 0;
   margin: 10px;
-  width: calc(25% - 20px);
   height: 300px;
   color: #fff;
   background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
@@ -393,7 +394,6 @@ footer {
   padding: 20px;
   padding-bottom: 0;
   margin: 10px;
-  width: calc(25% - 20px);
   height: 300px;
   color: #fff;
   background: linear-gradient(8deg, rgb(32, 29, 29) 63%, rgb(61, 58, 58) 100%);
@@ -666,8 +666,29 @@ footer {
   margin: 10px;
 }
 
+@media screen and (max-width: 1199px) {
+  #searchContainer {
+    margin: unset;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 991px) {
   .likes {
+    margin: auto;
+  }
+  #content {
+    max-height: calc(100vh - 110px);
+  }
+  #thisAlbum .card.mainAlbum .card-body {
+    padding: 1rem;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardList .card .card-body p {
+    width: 100%;
+    padding: 12px;
+    font-size: x-small;
     margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
