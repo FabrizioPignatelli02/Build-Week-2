@@ -629,6 +629,12 @@ footer {
   right: 5px;
 }
 
+.song {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+}
+
 @media screen and (max-width: 991px) {
   .likes {
     margin: auto;

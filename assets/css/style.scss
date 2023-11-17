@@ -219,11 +219,9 @@ svg {
   }
 }
 
-.nameList:hover{
-  background-color: rgba(128, 128, 128, 0.438)
+.nameList:hover {
+  background-color: rgba(128, 128, 128, 0.438);
 }
-
-
 
 #buttonSectionArtist {
   margin-left: 20px;
@@ -691,6 +689,13 @@ footer {
     right: 5px;
   }
 }
+
+.song {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+}
+
 @media screen and (max-width: 991px) {
   .likes {
     margin: auto;
