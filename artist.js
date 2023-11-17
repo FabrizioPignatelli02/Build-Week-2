@@ -52,6 +52,7 @@ fetch(URL, {
     mainArtist.appendChild(numberFan);
 
     const songsLike = document.createElement("div");
+    songsLike.className = "likes";
     const h2 = document.createElement("h2");
     h2.classList.add("mt-5");
     h2.classList.add("mx-3");

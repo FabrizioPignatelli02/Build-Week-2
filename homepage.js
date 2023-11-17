@@ -32,7 +32,7 @@ updateAlbum(currentIndex);
 const artistAlbum = document.getElementById("artistAlbum");
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/artist/";
 
-const artistId = ["4999707", "6550", "169850", "5866223", "140"];
+const artistId = ["4999707", "6550", "169850", "5866223"];
 
 artistId.forEach((id) => {
   const newURL = URL + id;
