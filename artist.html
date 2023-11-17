@@ -225,10 +225,11 @@
             <a href="#"><i class="bi bi-repeat"></i></a>
           </div>
           <div class="progressContainer d-flex align-items-center justify-content-center">
-            <span>0:00</span>
+            <span></span>
             <div class="progressBar">
-              <!-- <input type="range" min="0" max="100" value="50" class="volume-range" /> -->
-              <div class="progress"></div>
+              <div class="progress w-100 bg-dark">
+                <input style="width: 100%; accent-color: lime"" type="range" min="0" max="100" />
+              </div>
             </div>
             <span id="songTimeAll"></span>
           </div>
@@ -239,7 +240,14 @@
             <a href="#"><i class="bi bi-volume-up"></i></a>
             <div class="progressBar">
               <div class="progress bg-dark">
-                <input style="width: 100%; accent-color: lime" type="range" min="0" max="100" class="volume-range" />
+                <input
+                  style="width: 100%; accent-color: lime"
+                  id="player"
+                  type="range"
+                  min="0"
+                  max="100"
+                  class="volume-range"
+                />
               </div>
             </div>
             <a href="#"><i class="bi bi-arrows-angle-expand"></i></a>
