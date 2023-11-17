@@ -78,10 +78,8 @@ svg {
 }
 
 .plus {
-  background-color: #7b7b7b;
-
-  background-size: contain;
   font-size: 25px;
+  background-color: grey; /* Imposta il colore di sfondo grigio desiderato */
 }
 
 .heart {
@@ -667,6 +665,9 @@ footer {
 }
 
 // pagina search.html
+
+// search-icon
+
 .searchCard {
   width: 200px;
   height: 200px;
