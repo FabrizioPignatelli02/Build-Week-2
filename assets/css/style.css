@@ -73,22 +73,15 @@ section#newAlbum, section#thisAlbum {
 }
 
 svg {
-  width: 10%;
+  height: 20px;
   fill: white;
+  vertical-align: sub;
 }
-
-#icon-navbar svg {
+svg.bi.bi-plus {
+  height: 25px;
+  border: 1px solid white;
   width: 25px;
-}
-
-.nav-item svg {
-  padding-bottom: 5px;
-  vertical-align: middle;
-}
-
-.plus {
-  font-size: 25px;
-  background-color: #555;
+  vertical-align: top;
 }
 
 .heart {
