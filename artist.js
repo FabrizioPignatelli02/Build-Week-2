@@ -12,8 +12,8 @@ fetch(URL, {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "340f0fd2c3mshd061c26435823fbp17f559jsnc5395de2b6ca",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-  }
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+  },
 })
   .then((resp) => {
     return resp.json();
@@ -101,8 +101,8 @@ fetch(URLSongs, {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "340f0fd2c3mshd061c26435823fbp17f559jsnc5395de2b6ca",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-  }
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+  },
 })
   .then((resp) => {
     return resp.json();
@@ -182,14 +182,14 @@ fetch(URLSongs, {
         pauseButtonPreview.addEventListener("click", pause);
 
         function play() {
-          audio.play();
+          currentAudio.play();
           playButtonPreview.classList.add("d-none");
           pauseButtonPreview.classList.remove("d-none");
           pauseButtonPreview.classList.add("d-block");
         }
 
         function pause() {
-          audio.pause();
+          currentAudio.pause();
           playButtonPreview.classList.remove("d-none");
           pauseButtonPreview.classList.add("d-none");
         }
