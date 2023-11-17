@@ -73,8 +73,16 @@ section#newAlbum, section#thisAlbum {
 }
 
 svg {
-  width: 10%;
+  height: 20px;
   fill: white;
+  vertical-align: sub;
+}
+svg.bi .bi-plus {
+  height: 25px;
+  border: 1px solid white;
+  color: white;
+  width: 25px;
+  vertical-align: top;
 }
 
 .heart {
