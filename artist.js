@@ -125,17 +125,16 @@ fetch(URLSongs, {
       buttonSongPlay.addEventListener("click", playSong);
 
       function playSong() {
-        // const videoSource = document.createElement("video");
-        // videoSource.autoplay = "true";
-        // const sourceSong = document.createElement("source");
-        // sourceSong.src = song.preview;
-        // sourceSong.type = "audio/mpeg";
-        // videoSource.appendChild(sourceSong);
-        // console.log("videosource", videoSource);
-
         const audio = document.createElement("audio");
-        audio.controls = "true";
-        audio.src = song.preview;
+        audio.controls = true;
+
+        console.log("controlli", audio.controls);
+
+        const sourceAudio = document.createElement("source");
+        sourceAudio.src = song.preview;
+        sourceAudio.type = "audio/mpeg";
+
+        audio.appendChild(sourceAudio);
 
         const playerImageSong = document.getElementById("playerImageSong");
         playerImageSong.src = song.album.cover_small;
@@ -145,6 +144,25 @@ fetch(URLSongs, {
 
         const songsArtist = document.getElementsByClassName("songsArtist")[0];
         songsArtist.innerText = song.artist.name;
+
+        const playButton = document.getElementsByClassName("bi-play-circle")[0].parentElement;
+        const pauseButton = document.getElementsByClassName("bi-pause-circle")[0].parentElement;
+
+        playButton.addEventListener("click", play);
+        pauseButton.addEventListener("click", pause);
+
+        function play() {
+          audio.play();
+          playButton.classList.add("d-none");
+          pauseButton.classList.remove("d-none");
+          pauseButton.classList.add("d-block");
+        }
+        function pause() {
+          audio.pause();
+          pauseButton.classList.add("d-none");
+          playButton.classList.remove("d-none");
+          playButton.classList.add("d-block");
+        }
       }
 
       tdButton.appendChild(buttonSongPlay);

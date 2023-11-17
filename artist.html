@@ -219,14 +219,15 @@
           <div class="control-buttons d-flex align-items-center">
             <a href="#"><i class="bi bi-shuffle"></i></a>
             <a href="#"><i class="bi bi-skip-start-circle"></i></a>
-            <a href="#"><i class="play-pause bi bi-play-circle"></i></a>
+            <a id="playButton" href="#"><i class="play-pause bi bi-play-circle"></i></a>
+            <a id="pauseButton" class="d-none" href="#"><i class="play-pause bi bi-pause-circle"></i></a>
             <a href="#"><i class="bi bi-skip-end-circle"></i></a>
             <a href="#"><i class="bi bi-repeat"></i></a>
           </div>
           <div class="progressContainer d-flex align-items-center justify-content-center">
             <span>0:00</span>
             <div class="progressBar">
-              <div class="progress"></div>
+              <div id="progress" class="progress"></div>
             </div>
             <span>0:30</span>
           </div>
