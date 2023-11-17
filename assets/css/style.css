@@ -77,25 +77,11 @@ svg {
   fill: white;
   vertical-align: sub;
 }
-svg.bi .bi-plus {
+svg.bi.bi-plus {
   height: 25px;
   border: 1px solid white;
   width: 25px;
   vertical-align: top;
-}
-
-#icon-navbar svg {
-  width: 25px;
-}
-
-.nav-item svg {
-  padding-bottom: 5px;
-  vertical-align: middle;
-}
-
-.plus {
-  font-size: 25px;
-  background-color: #555;
 }
 
 .heart {
