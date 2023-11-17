@@ -481,6 +481,8 @@ footer {
 
 #searchContainer {
   position: relative;
+  text-align: center;
+  padding-top: 15px;
 }
 #searchContainer .search-bar {
   padding-right: 30px;
