@@ -119,10 +119,7 @@ fetch(URLSongs, {
       const trSong = document.createElement("tr");
       trSong.classList.add("nameList");
 
-      const tdButton = document.createElement("td");
-      const buttonSongPlay = document.createElement("button");
-      buttonSongPlay.innerText = "PLAY";
-      buttonSongPlay.addEventListener("click", playSong);
+      trSong.addEventListener("click", playSong);
 
       function playSong() {
         const audio = document.createElement("audio");
@@ -165,7 +162,7 @@ fetch(URLSongs, {
         }
       }
 
-      tdButton.appendChild(buttonSongPlay);
+      // tdButton.appendChild(buttonSongPlay);
 
       const tdSong4 = document.createElement("td");
       tdSong4.innerText = index + 1;
@@ -189,7 +186,7 @@ fetch(URLSongs, {
 
       tdSong3.innerText = duration;
 
-      trSong.appendChild(tdButton);
+      // trSong.appendChild(tdButton);
       trSong.appendChild(tdSong4);
       trSong.appendChild(tdSong1);
       trSong.appendChild(tdSong2);
